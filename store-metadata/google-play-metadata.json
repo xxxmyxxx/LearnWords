@@ -1,0 +1,55 @@
+{
+  "store_listing": {
+    "title": {
+      "tr": "Learn Words App - 30 Dilde Kelime Öğren",
+      "en": "Learn Words App - Learn Words in 30 Languages"
+    },
+    "short_description": {
+      "tr": "Modern ve eğlenceli kelime öğrenme uygulaması",
+      "en": "Modern and fun vocabulary learning app"
+    },
+    "full_description": {
+      "tr": "Learn Words App ile 30 farklı dilde kelime öğrenin! Modern ve kullanıcı dostu arayüzü ile dil öğrenmeyi eğlenceli hale getiriyoruz.\n\nÖZELLİKLER:\n• 30 farklı dilde kelime öğrenme\n• Kişiselleştirilmiş öğrenme deneyimi\n• Günlük kelime hedefleri\n• Sesli telaffuz desteği\n• Çevrimdışı çalışma imkanı\n• İlerleme takibi ve istatistikler\n• Oyunlaştırılmış öğrenme sistemi\n• Düzenli içerik güncellemeleri\n\nDESTEKLENEN DİLLER:\nİngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Rusça, Japonca, Korece, Çince ve daha fazlası!\n\nÜCRETSİZ ÖZELLİKLER:\n• Günlük kelime öğrenme\n• Temel kelime listeleri\n• İlerleme takibi\n• Basit alıştırmalar\n\nPREMIUM ÖZELLİKLER:\n• Sınırsız kelime öğrenme\n• Özel kelime listeleri oluşturma\n• Gelişmiş istatistikler\n• Reklamsız deneyim\n• Offline mod\n• Öncelikli destek\n\nHemen indirin ve dil öğrenme yolculuğunuza başlayın!",
+      "en": "Learn words in 30 different languages with Learn Words App! We make language learning fun with our modern and user-friendly interface.\n\nFEATURES:\n• Learn words in 30 different languages\n• Personalized learning experience\n• Daily word goals\n• Audio pronunciation support\n• Offline study capability\n• Progress tracking and statistics\n• Gamified learning system\n• Regular content updates\n\nSUPPORTED LANGUAGES:\nEnglish, German, French, Spanish, Italian, Portuguese, Russian, Japanese, Korean, Chinese, and more!\n\nFREE FEATURES:\n• Daily word learning\n• Basic word lists\n• Progress tracking\n• Simple exercises\n\nPREMIUM FEATURES:\n• Unlimited word learning\n• Create custom word lists\n• Advanced statistics\n• Ad-free experience\n• Offline mode\n• Priority support\n\nDownload now and start your language learning journey!"
+    }
+  },
+  "data_safety": {
+    "data_types": {
+      "personal_info": ["email"],
+      "app_activity": ["in_app_performance", "user_progress"],
+      "social_info": ["facebook_profile"]
+    },
+    "data_usage": {
+      "app_functionality": true,
+      "analytics": true,
+      "personalization": true
+    },
+    "security_practices": {
+      "data_encrypted": true,
+      "data_deletion": true
+    }
+  },
+  "app_content": {
+    "content_rating": {
+      "rating_system": "ESRB",
+      "rating_value": "Everyone",
+      "content_descriptors": []
+    },
+    "target_audience": {
+      "age_range": {
+        "min": 3,
+        "max": null
+      }
+    }
+  },
+  "app_details": {
+    "category": "Education",
+    "tags": [
+      "language learning",
+      "vocabulary",
+      "education",
+      "quiz",
+      "foreign language"
+    ]
+  }
+} 
