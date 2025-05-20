@@ -79,7 +79,7 @@ const Legal: React.FC = () => {
                       </div>
                     ))}
                     <p className="mt-6 italic">
-                      {language === "en" ? "Last updated: June 1, 2023" : "Son güncelleme: 1 Haziran 2023"}
+                      {language === "en" ? "Last updated: May 20, 2025" : "Son güncelleme: 20 Mayıs 2025"}
                     </p>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ const Legal: React.FC = () => {
                       </div>
                     ))}
                     <p className="mt-6 italic">
-                      {language === "en" ? "Last updated: June 1, 2023" : "Son güncelleme: 1 Haziran 2023"}
+                      {language === "en" ? "Last updated: May 20, 2025" : "Son güncelleme: 20 Mayıs 2025"}
                     </p>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ const Legal: React.FC = () => {
                       </div>
                     ))}
                     <p className="mt-6 italic">
-                      {language === "en" ? "Last updated: June 1, 2023" : "Son güncelleme: 1 Haziran 2023"}
+                      {language === "en" ? "Last updated: May 20, 2025" : "Son güncelleme: 20 Mayıs 2025"}
                     </p>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ const Legal: React.FC = () => {
                       </div>
                     ))}
                     <p className="mt-6 italic">
-                      {language === "en" ? "Last updated: June 1, 2023" : "Son güncelleme: 1 Haziran 2023"}
+                      {language === "en" ? "Last updated: May 20, 2025" : "Son güncelleme: 20 Mayıs 2025"}
                     </p>
                   </div>
                 </div>

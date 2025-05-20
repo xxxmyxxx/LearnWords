@@ -13,18 +13,18 @@ const LogoIcon: React.FC<LogoIconProps> = ({ size = "md", className = "" }) => {
   };
   
   const dotSizes = {
-    sm: "w-2 h-2",
-    md: "w-3 h-3",
-    lg: "w-4 h-4",
+    sm: "w-1.5 h-1.5",
+    md: "w-2.5 h-2.5",
+    lg: "w-3.5 h-3.5",
   };
 
   return (
     <div className={`flex-shrink-0 rounded-lg bg-white shadow-md flex items-center justify-center ${sizeClasses[size]} ${className}`}>
-      <span className="flex items-center space-x-1">
-        <span className={`inline-block ${dotSizes[size]} rounded-full bg-[#2ECC71]`}></span>
-        <span className={`inline-block ${dotSizes[size]} rounded-full bg-[#F1C40F]`}></span>
-        <span className={`inline-block ${dotSizes[size]} rounded-full bg-[#E74C3C]`}></span>
-      </span>
+      <div className="flex items-center justify-center gap-1">
+        <span className={`${dotSizes[size]} rounded-full bg-[#2ECC71]`}></span>
+        <span className={`${dotSizes[size]} rounded-full bg-[#F1C40F]`}></span>
+        <span className={`${dotSizes[size]} rounded-full bg-[#E74C3C]`}></span>
+      </div>
     </div>
   );
 };

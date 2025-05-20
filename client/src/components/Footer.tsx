@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; 2023 Learn Words. All rights reserved.</p>
+          <p>&copy; 2025 Learn Words. All rights reserved.</p>
           <p className="mt-2">
             Learn Words is not affiliated with any language learning institution. Icon design based on traffic light concept.
           </p>
