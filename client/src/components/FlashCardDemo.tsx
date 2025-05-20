@@ -18,8 +18,6 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import ScoreTracker from "./ScoreTracker";
 
-// Direction guide component
-
 // Directional guide component for visual cues
 const SwipeGuide: React.FC<{ direction: string; active: boolean }> = ({ direction, active }) => {
   const getPosition = () => {
@@ -76,6 +74,7 @@ const FlashCardDemo: React.FC = () => {
   const [swipeDirection, setSwipeDirection] = useState<string | null>(null);
   const [activeSwipeGuide, setActiveSwipeGuide] = useState<string | null>(null);
   const [showSheet, setShowSheet] = useState(false);
+  const [sheetVisible, setSheetVisible] = useState(false); // Added for tracking if bottom sheet is shown
   const [stackPosition, setStackPosition] = useState([0, -5, -10]); // Position of cards in the stack
   
   // Counters
@@ -149,6 +148,8 @@ const FlashCardDemo: React.FC = () => {
         break;
       case "down":
         setOrangeScore(prev => prev + 1);
+        // Immediately open bottom sheet on down swipe
+        setShowSheet(true);
         break;
       case "up":
         setBlueScore(prev => prev + 1);
@@ -162,11 +163,6 @@ const FlashCardDemo: React.FC = () => {
       // Reset for next card
       setSwipeDirection(null);
       setFlipped(false);
-      
-      // Open bottom sheet on down swipe
-      if (direction === "down") {
-        setShowSheet(true);
-      }
     }, 400);
   };
   
@@ -409,10 +405,10 @@ const FlashCardDemo: React.FC = () => {
                   <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
                 </svg>
               </div>
-              Kategori Seçin
+              Select Category
             </SheetTitle>
             <SheetDescription>
-              "{currentCard.word}" kelimesini eklemek istediğiniz kategoriyi seçin
+              Choose a category to add "{currentCard.word}"
             </SheetDescription>
           </SheetHeader>
           
@@ -424,7 +420,7 @@ const FlashCardDemo: React.FC = () => {
                     <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"></path>
                   </svg>
                 </div>
-                Yeni Kategori Ekle
+                Add New Category
               </Button>
               
               <Button variant="outline" className="w-full justify-between" onClick={() => setShowSheet(false)}>
@@ -434,9 +430,9 @@ const FlashCardDemo: React.FC = () => {
                       <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
                     </svg>
                   </div>
-                  Günlük Konuşma
+                  Daily Conversation
                 </div>
-                <span className="text-sm text-gray-500">4 kelime</span>
+                <span className="text-sm text-gray-500">4 words</span>
                 <ChevronUp className="h-4 w-4 text-gray-500" />
               </Button>
             </div>
@@ -457,7 +453,7 @@ const FlashCardDemo: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Etkileşimli Öğrenme
+            Interactive Learning
           </motion.h2>
           <motion.p 
             className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
@@ -466,7 +462,7 @@ const FlashCardDemo: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Kaydırmalı flash kartlar, herhangi bir dilde kelime dağarcığını öğrenmeyi sezgisel ve verimli hale getirir.
+            Swipeable flash cards make learning vocabulary in any language intuitive and efficient.
           </motion.p>
         </div>
         
@@ -474,33 +470,36 @@ const FlashCardDemo: React.FC = () => {
           {/* Language selectors */}
           <div className="w-full max-w-xs mb-6 md:mb-0 space-y-4">
             <div>
-              <label className="block text-sm font-medium mb-1">Öğrenmek İstediğiniz Dil</label>
+              <label className="block text-sm font-medium mb-1">Target Language</label>
               <Select 
                 value={targetLanguage}
                 onValueChange={setTargetLanguage}
               >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Hedef Dil" />
+                  <SelectValue placeholder="Select Target" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="English">İngilizce</SelectItem>
-                  <SelectItem value="German">Almanca</SelectItem>
-                  <SelectItem value="Japanese">Japonca</SelectItem>
+                  <SelectItem value="English">English</SelectItem>
+                  <SelectItem value="German">German</SelectItem>
+                  <SelectItem value="Japanese">Japanese</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             
             <div>
-              <label className="block text-sm font-medium mb-1">Ana Diliniz</label>
+              <label className="block text-sm font-medium mb-1">Native Language</label>
               <Select 
                 value={nativeLanguage}
                 onValueChange={setNativeLanguage}
               >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Ana Dil" />
+                  <SelectValue placeholder="Select Native" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Türkçe">Türkçe</SelectItem>
+                  <SelectItem value="English">English</SelectItem>
+                  <SelectItem value="German">German</SelectItem>
+                  <SelectItem value="Japanese">Japanese</SelectItem>
+                  <SelectItem value="Türkçe">Turkish</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -522,15 +521,15 @@ const FlashCardDemo: React.FC = () => {
           
           {/* Instructions */}
           <div className="w-full max-w-sm md:max-w-md">
-            <h3 className="text-xl font-semibold mb-4 font-poppins">Nasıl Çalışır?</h3>
+            <h3 className="text-xl font-semibold mb-4 font-poppins">How It Works</h3>
             <div className="space-y-4">
               <div className="flex items-start">
                 <div className="mr-4 bg-primary bg-opacity-10 dark:bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="font-bold text-primary">1</span>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-1 dark:text-white">Kartı Görüntüle</h4>
-                  <p className="text-gray-600 dark:text-gray-300">Kelimeyi görmek için karta dokunun</p>
+                  <h4 className="font-medium mb-1 dark:text-white">View the Card</h4>
+                  <p className="text-gray-600 dark:text-gray-300">Tap on the card to see the word</p>
                 </div>
               </div>
               
@@ -539,8 +538,8 @@ const FlashCardDemo: React.FC = () => {
                   <span className="font-bold text-primary">2</span>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-1 dark:text-white">Çeviri için Çevir</h4>
-                  <p className="text-gray-600 dark:text-gray-300">Çeviriyi görmek için karta tıklayın</p>
+                  <h4 className="font-medium mb-1 dark:text-white">Flip for Translation</h4>
+                  <p className="text-gray-600 dark:text-gray-300">Click on the card to see the translation</p>
                 </div>
               </div>
               
@@ -549,12 +548,12 @@ const FlashCardDemo: React.FC = () => {
                   <span className="font-bold text-primary">3</span>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-1 dark:text-white">Kaydırarak İşaretle</h4>
+                  <h4 className="font-medium mb-1 dark:text-white">Swipe to Mark</h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    <span className="text-green-500 font-medium">Sağa</span>: Biliyorum, 
-                    <span className="text-red-500 font-medium"> Sola</span>: Bilmiyorum,<br/>
-                    <span className="text-blue-500 font-medium">Yukarı</span>: Kaydet, 
-                    <span className="text-yellow-500 font-medium"> Aşağı</span>: Tekrar
+                    <span className="text-green-500 font-medium">Right</span>: I know, 
+                    <span className="text-red-500 font-medium"> Left</span>: Don't know,<br/>
+                    <span className="text-blue-500 font-medium">Up</span>: Save, 
+                    <span className="text-yellow-500 font-medium"> Down</span>: Repeat
                   </p>
                 </div>
               </div>
@@ -564,8 +563,8 @@ const FlashCardDemo: React.FC = () => {
                   <span className="font-bold text-primary">4</span>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-1 dark:text-white">İlerlemeyi Takip Et</h4>
-                  <p className="text-gray-600 dark:text-gray-300">Bildiğiniz kelimeler daha az sıklıkta karşınıza çıkacak</p>
+                  <h4 className="font-medium mb-1 dark:text-white">Track Your Progress</h4>
+                  <p className="text-gray-600 dark:text-gray-300">Words you know will appear less frequently</p>
                 </div>
               </div>
             </div>
