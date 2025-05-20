@@ -48,17 +48,43 @@ const Legal: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap mb-6 justify-between items-center">
             <Tabs defaultValue="terms" value={currentTab} onValueChange={setCurrentTab} className="w-full">
-              <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-6">
+              {/* Language selector */}
+              <div className="flex justify-center mb-6">
+                <div className="bg-gray-100 dark:bg-slate-800 rounded-full p-1 inline-flex">
+                  <button 
+                    onClick={() => setLanguage("en")}
+                    className={`px-4 py-2 rounded-full text-sm font-medium ${
+                      language === "en" 
+                        ? "bg-white dark:bg-slate-700 shadow-sm" 
+                        : "text-gray-600 dark:text-gray-300"
+                    }`}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <img src="https://flagcdn.com/w20/gb.png" className="w-5 h-auto" alt="English" />
+                      <span>English</span>
+                    </div>
+                  </button>
+                  <button 
+                    onClick={() => setLanguage("tr")}
+                    className={`px-4 py-2 rounded-full text-sm font-medium ${
+                      language === "tr" 
+                        ? "bg-white dark:bg-slate-700 shadow-sm" 
+                        : "text-gray-600 dark:text-gray-300"
+                    }`}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <img src="https://flagcdn.com/w20/tr.png" className="w-5 h-auto" alt="Türkçe" />
+                      <span>Türkçe</span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              
+              <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-6">
                 <TabsTrigger value="terms">{language === "en" ? "Terms of Service" : "Kullanım Koşulları"}</TabsTrigger>
                 <TabsTrigger value="privacy">{language === "en" ? "Privacy Policy" : "Gizlilik Politikası"}</TabsTrigger>
                 <TabsTrigger value="deletion">{language === "en" ? "Data Deletion" : "Veri Silme"}</TabsTrigger>
                 <TabsTrigger value="kvkk">{language === "en" ? "KVKK Compliance" : "KVKK Uygunluk"}</TabsTrigger>
-                <TabsTrigger 
-                  value="language" 
-                  onClick={() => setLanguage(language === "en" ? "tr" : "en")}
-                >
-                  {language === "en" ? "Turkish / Türkçe" : "English / İngilizce"}
-                </TabsTrigger>
               </TabsList>
 
               <TabsContent value="terms" className="border-none p-0">

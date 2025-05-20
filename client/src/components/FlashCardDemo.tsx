@@ -11,38 +11,141 @@ import {
   Sheet, 
   SheetContent, 
   SheetHeader, 
-  SheetTitle 
+  SheetTitle, 
+  SheetDescription 
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+// Component for app icon with interactive score counters
+const ScoreTracker: React.FC<{
+  greenScore: number;
+  redScore: number;
+  orangeScore: number;
+  blueScore: number;
+}> = ({ greenScore, redScore, orangeScore, blueScore }) => {
+  return (
+    <div className="flex-shrink-0 rounded-lg bg-white dark:bg-slate-800 shadow-md flex flex-col items-center justify-center gap-2 p-4 w-16">
+      <div className="flex items-center gap-2">
+        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+        <span className="text-xs font-medium">{greenScore}</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+        <span className="text-xs font-medium">{redScore}</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <span className="text-xs font-medium">{orangeScore}</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+        <span className="text-xs font-medium">{blueScore}</span>
+      </div>
+    </div>
+  );
+};
+
+// Directional guide component for visual cues
+const SwipeGuide: React.FC<{ direction: string; active: boolean }> = ({ direction, active }) => {
+  const getPosition = () => {
+    switch (direction) {
+      case "left": return "left-2 top-1/2 -translate-y-1/2";
+      case "right": return "right-2 top-1/2 -translate-y-1/2";
+      case "up": return "top-2 left-1/2 -translate-x-1/2";
+      case "down": return "bottom-2 left-1/2 -translate-x-1/2";
+      default: return "";
+    }
+  };
+  
+  const getIcon = () => {
+    switch (direction) {
+      case "left": return <X className="h-5 w-5" />;
+      case "right": return <Check className="h-5 w-5" />;
+      case "up": return <Save className="h-5 w-5" />;
+      case "down": return <RefreshCw className="h-5 w-5" />;
+      default: return null;
+    }
+  };
+  
+  const getColor = () => {
+    switch (direction) {
+      case "left": return "bg-red-100 text-red-500 dark:bg-red-900 dark:text-red-300";
+      case "right": return "bg-green-100 text-green-500 dark:bg-green-900 dark:text-green-300";
+      case "up": return "bg-blue-100 text-blue-500 dark:bg-blue-900 dark:text-blue-300";
+      case "down": return "bg-yellow-100 text-yellow-500 dark:bg-yellow-900 dark:text-yellow-300";
+      default: return "";
+    }
+  };
+  
+  return (
+    <motion.div 
+      className={`absolute ${getPosition()} ${getColor()} p-2 rounded-full opacity-60 pointer-events-none ${active ? 'scale-110' : ''}`}
+      animate={{ opacity: active ? 0.9 : 0.6, scale: active ? 1.1 : 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      {getIcon()}
+    </motion.div>
+  );
+};
+
 const FlashCardDemo: React.FC = () => {
-  const [selectedLanguagePair, setSelectedLanguagePair] = useState<string>("English-Türkçe");
+  // Language preferences
+  const [targetLanguage, setTargetLanguage] = useState<string>("English");
+  const [nativeLanguage, setNativeLanguage] = useState<string>("Türkçe");
+  const [languagePair, setLanguagePair] = useState<string>("English-Türkçe");
+  
+  // Card states
   const [currentCards, setCurrentCards] = useState<FlashCard[]>(englishTurkishCards);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [swipeDirection, setSwipeDirection] = useState<string | null>(null);
+  const [activeSwipeGuide, setActiveSwipeGuide] = useState<string | null>(null);
   const [showSheet, setShowSheet] = useState(false);
-  const [sheetMode, setSheetMode] = useState<"save" | "category">("category");
   const [stackPosition, setStackPosition] = useState([0, -5, -10]); // Position of cards in the stack
   
+  // Counters
+  const [greenScore, setGreenScore] = useState(0);
+  const [redScore, setRedScore] = useState(0);
+  const [orangeScore, setOrangeScore] = useState(0);
+  const [blueScore, setBlueScore] = useState(0);
+  
   const audioRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
 
-  // Reset card index when language changes
+  // Update language pair when either language changes
   useEffect(() => {
-    const cards = availableCardSets[selectedLanguagePair as keyof typeof availableCardSets];
-    if (cards) {
-      setCurrentCards(cards);
+    const newPair = `${targetLanguage}-${nativeLanguage}`;
+    setLanguagePair(newPair);
+    
+    // If this pair exists in our sets
+    if (availableCardSets[newPair as keyof typeof availableCardSets]) {
+      setCurrentCards(availableCardSets[newPair as keyof typeof availableCardSets]);
       setCurrentCardIndex(0);
+      setFlipped(false);
     }
-  }, [selectedLanguagePair]);
+  }, [targetLanguage, nativeLanguage]);
 
   // Current card from the selected deck
   const currentCard = currentCards[currentCardIndex];
   
   // Card flip toggle
   const handleCardClick = () => {
-    setFlipped(!flipped);
+    if (!isDragging.current) {
+      setFlipped(!flipped);
+    }
+  };
+  
+  // Handle touch/mouse start to track if we're dragging
+  const handleDragStart = () => {
+    isDragging.current = true;
+  };
+  
+  // Handle touch/mouse end to reset dragging state
+  const handleDragEnd = () => {
+    setTimeout(() => {
+      isDragging.current = false;
+    }, 100);
   };
   
   // Play audio for the word
@@ -58,16 +161,25 @@ const FlashCardDemo: React.FC = () => {
     }
   };
   
-  // Save to personal collection
-  const handleSave = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent flipping card
-    setSheetMode("save");
-    setShowSheet(true);
-  };
-  
   // Process swipe in different directions
   const handleSwipeAction = (direction: string) => {
     setSwipeDirection(direction);
+    
+    // Update score counters based on direction
+    switch (direction) {
+      case "right":
+        setGreenScore(prev => prev + 1);
+        break;
+      case "left":
+        setRedScore(prev => prev + 1);
+        break;
+      case "down":
+        setOrangeScore(prev => prev + 1);
+        break;
+      case "up":
+        setBlueScore(prev => prev + 1);
+        break;
+    }
     
     // Wait for animation to complete before changing card
     setTimeout(() => {
@@ -76,25 +188,54 @@ const FlashCardDemo: React.FC = () => {
       // Reset for next card
       setSwipeDirection(null);
       setFlipped(false);
-    }, 300);
+      
+      // Open bottom sheet on down swipe
+      if (direction === "down") {
+        setShowSheet(true);
+      }
+    }, 400);
   };
   
   // Swipe handlers 
   const swipeHandlers = useSwipeable({
+    onSwipeStart: () => handleDragStart(),
+    onSwiped: () => handleDragEnd(),
     onSwipedLeft: () => handleSwipeAction("left"),
     onSwipedRight: () => handleSwipeAction("right"),
     onSwipedUp: () => handleSwipeAction("up"),
-    onSwipedDown: () => {
-      handleSwipeAction("down");
-      // Open bottom sheet on down swipe
-      setTimeout(() => {
-        setSheetMode("category");
-        setShowSheet(true);
-      }, 300);
-    },
+    onSwipedDown: () => handleSwipeAction("down"),
     preventScrollOnSwipe: true,
-    trackMouse: true
+    trackMouse: true,
+    delta: 10, // Minimum swipe distance
+    swipeDuration: 500, // Maximum time of swipe
   });
+  
+  // Show the swipe guide when hovering in a direction
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const distX = e.clientX - centerX;
+    const distY = e.clientY - centerY;
+    
+    // Determine which edge is closest
+    const isHorizontalCloser = Math.abs(distX) > Math.abs(distY);
+    
+    if (isHorizontalCloser) {
+      if (distX > 50) setActiveSwipeGuide("right");
+      else if (distX < -50) setActiveSwipeGuide("left");
+      else setActiveSwipeGuide(null);
+    } else {
+      if (distY > 50) setActiveSwipeGuide("down");
+      else if (distY < -50) setActiveSwipeGuide("up");
+      else setActiveSwipeGuide(null);
+    }
+  };
+  
+  const handleMouseLeave = () => {
+    setActiveSwipeGuide(null);
+  };
   
   // Animation variants based on swipe direction
   const cardVariants = {
@@ -196,7 +337,7 @@ const FlashCardDemo: React.FC = () => {
         {/* Main Card (Interactive) */}
         <motion.div
           {...swipeHandlers}
-          className="absolute top-0 left-0 right-0 mx-auto w-[280px] h-[450px] bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden perspective-1000 cursor-pointer"
+          className="absolute top-0 left-0 right-0 mx-auto w-[280px] h-[450px] bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden perspective-1000 cursor-pointer select-none"
           animate={getCardVariant()}
           variants={cardVariants}
           transition={{ 
@@ -204,6 +345,8 @@ const FlashCardDemo: React.FC = () => {
             default: { duration: 0.3 }
           }}
           onClick={handleCardClick}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
           style={{ 
             transformStyle: "preserve-3d",
           }}
@@ -215,22 +358,18 @@ const FlashCardDemo: React.FC = () => {
               zIndex: flipped ? 0 : 1,
             }}
           >
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-500 dark:text-gray-400">{currentCard.language.target}</span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">{currentCard.level}</span>
+            <div className="flex justify-end items-center">
+              <div 
+                ref={audioRef}
+                onClick={handlePlayAudio}
+                className="text-gray-500 dark:text-gray-400 hover:text-primary transition cursor-pointer"
+              >
+                <Volume2 className="h-5 w-5" />
+              </div>
             </div>
             
             <div className="flex-1 flex flex-col items-center justify-center text-center">
-              <h3 className="text-3xl font-bold mb-2 font-poppins">{currentCard.word}</h3>
-              <div className="flex items-center justify-center mb-8">
-                <div 
-                  ref={audioRef}
-                  onClick={handlePlayAudio}
-                  className="text-gray-500 dark:text-gray-400 hover:text-primary transition cursor-pointer"
-                >
-                  <Volume2 className="h-5 w-5" />
-                </div>
-              </div>
+              <h3 className="text-3xl font-bold mb-6 font-poppins">{currentCard.word}</h3>
               <div className="w-full h-1 bg-yellow-400 mb-5 rounded-full"></div>
               <p className="text-gray-600 dark:text-gray-300 px-4">{currentCard.hint.target}</p>
             </div>
@@ -241,30 +380,34 @@ const FlashCardDemo: React.FC = () => {
             className={`absolute w-full h-full p-6 flex flex-col ${flipped ? "" : "backface-hidden"}`}
             style={{ 
               transform: "rotateY(180deg)",
-              zIndex: flipped ? 1 : 0,
+              backfaceVisibility: "hidden",
             }}
           >
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-500 dark:text-gray-400">{currentCard.language.target}</span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">{currentCard.level}</span>
+            <div className="flex justify-end items-center">
+              <div 
+                onClick={handlePlayAudio}
+                className="text-gray-500 dark:text-gray-400 hover:text-primary transition cursor-pointer"
+              >
+                <Volume2 className="h-5 w-5" />
+              </div>
             </div>
             
             <div className="flex-1 flex flex-col items-center justify-center text-center">
-              <h3 className="text-3xl font-bold mb-1 font-poppins">{currentCard.word}</h3>
-              <p className="text-xl text-gray-500 dark:text-gray-400 mb-3">{currentCard.translationNative}</p>
-              <div className="flex items-center justify-center mb-8">
-                <div 
-                  onClick={handlePlayAudio}
-                  className="text-gray-500 dark:text-gray-400 hover:text-primary transition cursor-pointer"
-                >
-                  <Volume2 className="h-5 w-5" />
-                </div>
+              <div style={{ transform: "rotateY(180deg)" }}>
+                <h3 className="text-3xl font-bold mb-1 font-poppins">{currentCard.word}</h3>
+                <p className="text-xl text-gray-500 dark:text-gray-400 mb-4">{currentCard.translationNative}</p>
+                <div className="w-full h-1 bg-yellow-400 mb-5 rounded-full"></div>
+                <p className="text-gray-600 dark:text-gray-300 mb-2 px-4">{currentCard.hint.target}</p>
+                <p className="text-gray-500 dark:text-gray-400 italic px-4">{currentCard.hint.native}</p>
               </div>
-              <div className="w-full h-1 bg-yellow-400 mb-5 rounded-full"></div>
-              <p className="text-gray-600 dark:text-gray-300 mb-2 px-4">{currentCard.hint.target}</p>
-              <p className="text-gray-500 dark:text-gray-400 italic px-4">{currentCard.hint.native}</p>
             </div>
           </motion.div>
+          
+          {/* Swipe Direction Guides */}
+          <SwipeGuide direction="left" active={activeSwipeGuide === "left"} />
+          <SwipeGuide direction="right" active={activeSwipeGuide === "right"} />
+          <SwipeGuide direction="up" active={activeSwipeGuide === "up"} />
+          <SwipeGuide direction="down" active={activeSwipeGuide === "down"} />
           
           {renderStatusIndicator()}
         </motion.div>
@@ -276,7 +419,15 @@ const FlashCardDemo: React.FC = () => {
   const renderBottomSheet = () => {
     return (
       <Sheet open={showSheet} onOpenChange={setShowSheet}>
-        <SheetContent side="bottom" className="rounded-t-xl max-h-[60vh]">
+        <SheetContent 
+          side="bottom" 
+          className="rounded-t-xl"
+          style={{ 
+            maxWidth: "280px", 
+            marginLeft: "auto",
+            marginRight: "auto"
+          }}
+        >
           <SheetHeader>
             <SheetTitle className="flex items-center">
               <div className="p-2 bg-amber-100 rounded-full mr-2">
@@ -286,13 +437,12 @@ const FlashCardDemo: React.FC = () => {
               </div>
               Kategori Seçin
             </SheetTitle>
+            <SheetDescription>
+              "{currentCard.word}" kelimesini eklemek istediğiniz kategoriyi seçin
+            </SheetDescription>
           </SheetHeader>
           
           <div className="mt-6">
-            <p className="text-center text-gray-600 mb-4">
-              "{currentCard.word}" kelimesini eklemek istediğiniz kategoriyi seçin
-            </p>
-            
             <div className="space-y-4">
               <Button variant="outline" className="w-full justify-start" onClick={() => setShowSheet(false)}>
                 <div className="p-1.5 bg-amber-100 rounded-full mr-2">
@@ -347,23 +497,47 @@ const FlashCardDemo: React.FC = () => {
         </div>
         
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-          {/* Language selector */}
-          <div className="w-full max-w-xs mb-6 md:mb-0">
-            <Select 
-              value={selectedLanguagePair}
-              onValueChange={setSelectedLanguagePair}
-            >
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Dil Seçin" />
-              </SelectTrigger>
-              <SelectContent>
-                {Object.keys(availableCardSets).map((langPair) => (
-                  <SelectItem key={langPair} value={langPair}>
-                    {langPair}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+          {/* Language selectors */}
+          <div className="w-full max-w-xs mb-6 md:mb-0 space-y-4">
+            <div>
+              <label className="block text-sm font-medium mb-1">Öğrenmek İstediğiniz Dil</label>
+              <Select 
+                value={targetLanguage}
+                onValueChange={setTargetLanguage}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Hedef Dil" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="English">İngilizce</SelectItem>
+                  <SelectItem value="German">Almanca</SelectItem>
+                  <SelectItem value="Japanese">Japonca</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium mb-1">Ana Diliniz</label>
+              <Select 
+                value={nativeLanguage}
+                onValueChange={setNativeLanguage}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Ana Dil" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Türkçe">Türkçe</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            
+            {/* Score Tracker */}
+            <ScoreTracker 
+              greenScore={greenScore}
+              redScore={redScore}
+              orangeScore={orangeScore}
+              blueScore={blueScore}
+            />
           </div>
           
           {/* Card Stack */}

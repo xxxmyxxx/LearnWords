@@ -20,9 +20,10 @@ const item = {
 const Languages: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
   const displayedLanguages = showAll ? languages : languages.slice(0, 20);
+  const remainingCount = languages.length - 20;
 
   return (
-    <section id="languages" className="py-16 bg-white dark:bg-slate-900">
+    <section id="languages" className="py-16 bg-gray-50 dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <motion.h2 
@@ -32,7 +33,7 @@ const Languages: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            32 Languages Available
+            32 Dilde Öğrenme
           </motion.h2>
           <motion.p 
             className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
@@ -41,7 +42,7 @@ const Languages: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Learn vocabulary in any of these languages with our comprehensive flash card collections.
+            Popüler dünya dillerinden yerel dillere kadar geniş bir dil yelpazesinde kelime öğrenin.
           </motion.p>
         </div>
         
@@ -55,21 +56,27 @@ const Languages: React.FC = () => {
           {displayedLanguages.map((lang, index) => (
             <motion.div 
               key={index}
-              className="bg-gray-50 dark:bg-slate-800 rounded-lg p-4 text-center hover:shadow-md transition"
+              className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center space-x-3"
               variants={item}
             >
-              <div className="text-2xl mb-1">{lang.flag}</div>
-              <div className="font-medium dark:text-white">{lang.name}</div>
+              <div className="flex-shrink-0">
+                <img 
+                  src={`https://flagcdn.com/48x36/${lang.flag}.png`}
+                  alt={`${lang.name} flag`}
+                  className="w-8 h-6 rounded-sm object-cover"
+                />
+              </div>
+              <span className="font-medium dark:text-gray-200">{lang.name}</span>
             </motion.div>
           ))}
           
           {!showAll && (
             <motion.button
-              className="col-span-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center hover:bg-gray-50 dark:hover:bg-slate-800 transition mt-2"
+              className="col-span-full bg-primary text-white rounded-lg p-4 text-center hover:bg-primary/90 transition mt-4"
               onClick={() => setShowAll(true)}
               variants={item}
             >
-              <span className="text-primary font-medium">Show 12 more languages</span>
+              <span className="font-medium">{`${remainingCount} Dil Daha Göster`}</span>
             </motion.button>
           )}
         </motion.div>

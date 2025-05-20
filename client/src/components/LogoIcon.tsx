@@ -19,11 +19,12 @@ const LogoIcon: React.FC<LogoIconProps> = ({ size = "md", className = "" }) => {
   };
 
   return (
-    <div className={`flex-shrink-0 rounded-lg bg-white shadow-md flex items-center justify-center ${sizeClasses[size]} ${className}`}>
-      <div className="flex items-center justify-center gap-1">
+    <div className={`flex-shrink-0 rounded-lg bg-white shadow-md flex items-center justify-center ${sizeClasses[size]} p-1 ${className}`}>
+      <div className="flex flex-col items-center justify-center gap-1">
         <span className={`${dotSizes[size]} rounded-full bg-[#2ECC71]`}></span>
         <span className={`${dotSizes[size]} rounded-full bg-[#F1C40F]`}></span>
         <span className={`${dotSizes[size]} rounded-full bg-[#E74C3C]`}></span>
+        <span className={`${dotSizes[size]} rounded-full bg-[#4A90E2]`}></span>
       </div>
     </div>
   );
