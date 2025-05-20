@@ -16,35 +16,9 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import ScoreTracker from "./ScoreTracker";
 
-// Component for app icon with interactive score counters
-const ScoreTracker: React.FC<{
-  greenScore: number;
-  redScore: number;
-  orangeScore: number;
-  blueScore: number;
-}> = ({ greenScore, redScore, orangeScore, blueScore }) => {
-  return (
-    <div className="flex-shrink-0 rounded-lg bg-white dark:bg-slate-800 shadow-md flex flex-col items-center justify-center gap-2 p-4 w-16">
-      <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded-full bg-green-500"></div>
-        <span className="text-xs font-medium">{greenScore}</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded-full bg-red-500"></div>
-        <span className="text-xs font-medium">{redScore}</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-        <span className="text-xs font-medium">{orangeScore}</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-        <span className="text-xs font-medium">{blueScore}</span>
-      </div>
-    </div>
-  );
-};
+// Direction guide component
 
 // Directional guide component for visual cues
 const SwipeGuide: React.FC<{ direction: string; active: boolean }> = ({ direction, active }) => {
@@ -393,7 +367,7 @@ const FlashCardDemo: React.FC = () => {
             </div>
             
             <div className="flex-1 flex flex-col items-center justify-center text-center">
-              <div style={{ transform: "rotateY(180deg)" }}>
+              <div>
                 <h3 className="text-3xl font-bold mb-1 font-poppins">{currentCard.word}</h3>
                 <p className="text-xl text-gray-500 dark:text-gray-400 mb-4">{currentCard.translationNative}</p>
                 <div className="w-full h-1 bg-yellow-400 mb-5 rounded-full"></div>
