@@ -327,17 +327,7 @@ const FlashCardDemo: React.FC = () => {
             style={{ 
               zIndex: flipped ? 0 : 1,
             }}
-          >
-            <div className="flex justify-end items-center">
-              <div 
-                ref={audioRef}
-                onClick={handlePlayAudio}
-                className="text-gray-500 dark:text-gray-400 hover:text-primary transition cursor-pointer"
-              >
-                <Volume2 className="h-5 w-5" />
-              </div>
-            </div>
-            
+          >            
             <div className="flex-1 flex flex-col items-center justify-center text-center">
               <h3 className="text-3xl font-bold mb-6 font-poppins">{currentCard.word}</h3>
               <div className="w-full h-1 bg-yellow-400 mb-5 rounded-full"></div>
@@ -352,16 +342,7 @@ const FlashCardDemo: React.FC = () => {
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden",
             }}
-          >
-            <div className="flex justify-end items-center">
-              <div 
-                onClick={handlePlayAudio}
-                className="text-gray-500 dark:text-gray-400 hover:text-primary transition cursor-pointer"
-              >
-                <Volume2 className="h-5 w-5" />
-              </div>
-            </div>
-            
+          >            
             <div className="flex-1 flex flex-col items-center justify-center text-center">
               <div>
                 <h3 className="text-3xl font-bold mb-1 font-poppins">{currentCard.word}</h3>

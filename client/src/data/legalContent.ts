@@ -262,6 +262,76 @@ export const kvkkEn = [
   }
 ];
 
+export const dataSecurityEn = [
+  {
+    title: "1. Data Security Overview",
+    content: "Learn Words employs comprehensive security measures to protect your personal information and learning data from unauthorized access, alteration, disclosure, or destruction."
+  },
+  {
+    title: "2. Encryption Standards",
+    content: "We use industry-standard encryption protocols (TLS/SSL) to secure data transmission between your device and our servers. All stored data is encrypted at rest using AES-256 encryption."
+  },
+  {
+    title: "3. Access Controls",
+    content: "Access to user data is strictly limited to authorized personnel who require access to perform their job functions. All staff access is logged and monitored."
+  },
+  {
+    title: "4. Security Audits",
+    content: "We conduct regular security audits and vulnerability assessments to identify and address potential security risks in our systems."
+  },
+  {
+    title: "5. Data Breach Procedures",
+    content: "We maintain a comprehensive data breach response plan to quickly address any potential security incidents and notify affected users as required by applicable laws."
+  },
+  {
+    title: "6. User Authentication",
+    content: "We implement secure authentication methods, including optional two-factor authentication, to ensure only authorized users can access their accounts."
+  },
+  {
+    title: "7. Third-Party Security",
+    content: "We carefully vet all third-party service providers to ensure they maintain comparable security standards for any user data they may process."
+  },
+  {
+    title: "8. User Responsibilities",
+    content: "Users are responsible for maintaining the confidentiality of their account credentials and should use strong, unique passwords and enable available security features."
+  }
+];
+
+export const dataSecurityTr = [
+  {
+    title: "1. Veri Güvenliği Genel Bakış",
+    content: "Learn Words, kişisel bilgilerinizi ve öğrenme verilerinizi yetkisiz erişime, değiştirmeye, ifşaya veya yok edilmeye karşı korumak için kapsamlı güvenlik önlemleri kullanır."
+  },
+  {
+    title: "2. Şifreleme Standartları",
+    content: "Cihazınız ve sunucularımız arasındaki veri iletimini güvence altına almak için endüstri standardı şifreleme protokolleri (TLS/SSL) kullanıyoruz. Depolanan tüm veriler AES-256 şifreleme kullanılarak beklerken şifrelenir."
+  },
+  {
+    title: "3. Erişim Kontrolleri",
+    content: "Kullanıcı verilerine erişim, iş fonksiyonlarını gerçekleştirmek için erişim gerektiren yetkili personelle sıkı bir şekilde sınırlandırılmıştır. Tüm personel erişimi kaydedilir ve izlenir."
+  },
+  {
+    title: "4. Güvenlik Denetimleri",
+    content: "Sistemlerimizdeki potansiyel güvenlik risklerini belirlemek ve ele almak için düzenli güvenlik denetimleri ve güvenlik açığı değerlendirmeleri yapıyoruz."
+  },
+  {
+    title: "5. Veri İhlali Prosedürleri",
+    content: "Potansiyel güvenlik olaylarını hızla ele almak ve yürürlükteki yasaların gerektirdiği şekilde etkilenen kullanıcıları bilgilendirmek için kapsamlı bir veri ihlali müdahale planı sürdürüyoruz."
+  },
+  {
+    title: "6. Kullanıcı Kimlik Doğrulama",
+    content: "Hesaplarına yalnızca yetkili kullanıcıların erişebilmesini sağlamak için isteğe bağlı iki faktörlü kimlik doğrulama dahil güvenli kimlik doğrulama yöntemleri uyguluyoruz."
+  },
+  {
+    title: "7. Üçüncü Taraf Güvenliği",
+    content: "İşleyebilecekleri tüm kullanıcı verileri için karşılaştırılabilir güvenlik standartlarını koruduklarından emin olmak için tüm üçüncü taraf hizmet sağlayıcılarını dikkatle inceliyoruz."
+  },
+  {
+    title: "8. Kullanıcı Sorumlulukları",
+    content: "Kullanıcılar, hesap kimlik bilgilerinin gizliliğini korumakla sorumludur ve güçlü, benzersiz şifreler kullanmalı ve mevcut güvenlik özelliklerini etkinleştirmelidir."
+  }
+];
+
 export const kvkkTr = [
   {
     title: "1. Giriş",

@@ -33,7 +33,7 @@ const Languages: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            32 Dilde Öğrenme
+            Learn in 32 Languages
           </motion.h2>
           <motion.p 
             className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
@@ -42,7 +42,7 @@ const Languages: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Popüler dünya dillerinden yerel dillere kadar geniş bir dil yelpazesinde kelime öğrenin.
+            Learn vocabulary in a wide range of languages from popular world languages to regional dialects.
           </motion.p>
         </div>
         
@@ -76,7 +76,7 @@ const Languages: React.FC = () => {
               onClick={() => setShowAll(true)}
               variants={item}
             >
-              <span className="font-medium">{`${remainingCount} Dil Daha Göster`}</span>
+              <span className="font-medium">{`Show ${remainingCount} More Languages`}</span>
             </motion.button>
           )}
         </motion.div>

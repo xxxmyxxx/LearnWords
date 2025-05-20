@@ -80,11 +80,12 @@ const Legal: React.FC = () => {
                 </div>
               </div>
               
-              <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-6">
+              <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-6">
                 <TabsTrigger value="terms">{language === "en" ? "Terms of Service" : "Kullanım Koşulları"}</TabsTrigger>
                 <TabsTrigger value="privacy">{language === "en" ? "Privacy Policy" : "Gizlilik Politikası"}</TabsTrigger>
                 <TabsTrigger value="deletion">{language === "en" ? "Data Deletion" : "Veri Silme"}</TabsTrigger>
-                <TabsTrigger value="kvkk">{language === "en" ? "KVKK Compliance" : "KVKK Uygunluk"}</TabsTrigger>
+                <TabsTrigger value="security">{language === "en" ? "Data Security" : "Veri Güvenliği"}</TabsTrigger>
+                {language === "tr" && <TabsTrigger value="kvkk">KVKK Uygunluk</TabsTrigger>}
               </TabsList>
 
               <TabsContent value="terms" className="border-none p-0">
