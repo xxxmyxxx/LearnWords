@@ -1,9 +1,8 @@
-import type { Express } from "express";
+import type { Express, Request, Response, NextFunction } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { contactSubmissions, insertContactSchema, insertSubscriptionSchema, subscriptions } from "@shared/schema";
 import { z } from "zod";
-import { fromZodError } from "zod-validation-error";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -25,7 +24,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({
           success: false,
           message: "Invalid form data",
-          errors: fromZodError(error)
+          errors: error.format()
         });
       }
       
@@ -55,7 +54,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({
           success: false,
           message: "Invalid email address",
-          errors: fromZodError(error)
+          errors: error.format()
         });
       }
       
