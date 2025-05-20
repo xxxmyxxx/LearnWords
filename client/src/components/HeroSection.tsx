@@ -48,28 +48,23 @@ const HeroSection: React.FC = () => {
           >
             <div className="relative">
               {/* A stylized mockup of the app showing a flash card interface */}
+              {/* Removed animation */}
               <motion.div 
                 className="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-6 max-w-xs"
-                animate={{ y: [0, -20, 0] }}
-                transition={{ 
-                  repeat: Infinity, 
-                  duration: 6,
-                  ease: "easeInOut"
-                }}
               >
                 <div className="flex justify-between items-center mb-6">
-                  <div className="flex space-x-1">
+                  <div className="flex flex-col space-y-1">
                     <span className="inline-block w-3 h-3 rounded-full bg-[#2ECC71]"></span>
                     <span className="inline-block w-3 h-3 rounded-full bg-[#F1C40F]"></span>
                     <span className="inline-block w-3 h-3 rounded-full bg-[#E74C3C]"></span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#4A90E2]"></span>
                   </div>
                   <div className="text-sm text-gray-500 dark:text-gray-400">Learn Words</div>
                 </div>
                 <div className="bg-primary bg-opacity-10 dark:bg-opacity-20 rounded-2xl p-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-medium mb-1">English</div>
-                    <div className="text-3xl font-bold mb-2">Apple</div>
-                    <div className="text-gray-500 dark:text-gray-400 text-sm">Swipe right if you know it</div>
+                    <div className="text-3xl font-bold mb-2">Elma</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">Biliyorsan sağa kaydır</div>
                   </div>
                 </div>
                 <div className="flex justify-between">
