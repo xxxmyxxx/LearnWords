@@ -4,7 +4,7 @@ import "./index.css";
 
 // Meta elements for SEO
 const updateMetaTags = () => {
-  document.title = "Learn Words - Language Learning App with Flash Cards";
+  document.title = "Learn Words";
   
   // Description meta tag
   let descriptionMeta = document.querySelector('meta[name="description"]');
@@ -15,14 +15,14 @@ const updateMetaTags = () => {
   }
   descriptionMeta.setAttribute('content', 'Master vocabulary in 32 languages with Learn Words app. Interactive flash cards, competitions, and personalized learning paths.');
   
-  // Favicon
-  let favicon = document.querySelector('link[rel="icon"]');
-  if (!favicon) {
-    favicon = document.createElement('link');
-    favicon.setAttribute('rel', 'icon');
-    document.head.appendChild(favicon);
-  }
-  favicon.setAttribute('href', 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>');
+  // Favicon - Let index.html handle this to use the correct icon file.
+  // let favicon = document.querySelector('link[rel="icon"]');
+  // if (!favicon) {
+  //   favicon = document.createElement('link');
+  //   favicon.setAttribute('rel', 'icon');
+  //   document.head.appendChild(favicon);
+  // }
+  // favicon.setAttribute('href', '/src/assets/icon.png');
   
   // Font imports
   const fontLink = document.createElement('link');
@@ -32,7 +32,7 @@ const updateMetaTags = () => {
   
   // Open Graph tags
   const ogTags = [
-    { property: 'og:title', content: 'Learn Words - Language Learning App with Flash Cards' },
+    { property: 'og:title', content: 'Learn Words' },
     { property: 'og:description', content: 'Master vocabulary in 32 languages with Learn Words app. Interactive flash cards, competitions, and personalized learning paths.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://learnwords.store' },

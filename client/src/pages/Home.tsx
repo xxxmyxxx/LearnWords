@@ -2,7 +2,6 @@ import React from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Features from "@/components/Features";
-import FlashCardDemo from "@/components/FlashCardDemo";
 import Languages from "@/components/Languages";
 import Testimonials from "@/components/Testimonials";
 import Download from "@/components/Download";
@@ -17,7 +16,6 @@ const Home: React.FC = () => {
       <main>
         <HeroSection />
         <Features />
-        <FlashCardDemo />
         <Languages />
         <Testimonials />
         <Download />

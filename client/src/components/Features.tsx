@@ -35,7 +35,7 @@ const features = [
     title: "Progress",
     description: "Track your learning journey with detailed statistics and visual progress indicators.",
     icon: LineChart,
-    iconBg: "bg-secondary",
+    iconBg: "bg-destructive",
     benefits: [
       "Daily and weekly learning goals",
       "Visual progress charts",
@@ -46,7 +46,7 @@ const features = [
     title: "My Words",
     description: "Create and manage your personal collection of words to focus on what matters most to you.",
     icon: Book,
-    iconBg: "bg-primary",
+    iconBg: "bg-secondary",
     benefits: [
       "Custom word lists and favorites",
       "Word search functionality",
@@ -116,7 +116,7 @@ const Features: React.FC = () => {
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 {feature.benefits.map((benefit, bIndex) => (
                   <li key={bIndex} className="flex items-start">
-                    <Check className="text-secondary mt-1 mr-2 h-4 w-4" />
+                    <Check className="text-green-500 mt-1 mr-2 h-4 w-4 flex-shrink-0" />
                     <span>{benefit}</span>
                   </li>
                 ))}

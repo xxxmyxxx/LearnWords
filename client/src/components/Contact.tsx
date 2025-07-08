@@ -59,7 +59,6 @@ const Contact: React.FC = () => {
       toast({
         title: "Message sent!",
         description: "We'll get back to you as soon as possible.",
-        variant: "success"
       });
       form.reset();
     },
