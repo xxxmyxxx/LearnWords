@@ -3,6 +3,10 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { contactSubmissions, insertContactSchema, insertSubscriptionSchema, subscriptions } from "@shared/schema";
 import { z } from "zod";
+import { sendEmail } from './email';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -10,13 +14,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const contactData = insertContactSchema.parse(req.body);
       
-      // Store the contact form submission
-      const submission = await storage.createContactSubmission(contactData);
+      await sendEmail({
+        to: process.env.EMAIL_RECIPIENT || 'recipient@example.com',
+        subject: `New Contact Form Submission: ${contactData.subject}`,
+        text: `Name: ${contactData.name}\nEmail: ${contactData.email}\nMessage: ${contactData.message}`,
+        html: `
+          <h3>New Contact Form Submission</h3>
+          <p><strong>Name:</strong> ${contactData.name}</p>
+          <p><strong>Email:</strong> ${contactData.email}</p>
+          <p><strong>Subject:</strong> ${contactData.subject}</p>
+          <p><strong>Message:</strong></p>
+          <p>${contactData.message}</p>
+        `
+      });
       
-      return res.status(201).json({
+      return res.status(200).json({
         success: true,
         message: "Contact form submitted successfully",
-        data: submission
       });
     } catch (error) {
       // Handle validation errors
@@ -28,6 +42,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
+      console.error('Error processing contact form:', error);
       return res.status(500).json({
         success: false,
         message: "An error occurred while submitting the form"
