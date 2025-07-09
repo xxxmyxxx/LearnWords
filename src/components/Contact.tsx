@@ -3,8 +3,6 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
-import { useMutation } from "@tanstack/react-query";
 import {
   Form,
   FormControl,
@@ -49,29 +47,27 @@ const Contact: React.FC = () => {
     }
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormValues) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      form.reset();
-    },
-    onError: () => {
-      toast({
-        title: "Error sending message",
-        description: "Please try again later or contact us directly via email.",
-        variant: "destructive"
-      });
-    }
-  });
-
   const onSubmit = (data: ContactFormValues) => {
-    contactMutation.mutate(data);
+    // Statik mailto ile mail gönderme
+    const subject = encodeURIComponent(`${data.subject}: ${data.name}`);
+    const body = encodeURIComponent(`
+Name: ${data.name}
+Email: ${data.email}
+Subject: ${data.subject}
+
+Message:
+${data.message}
+    `);
+    
+    const mailtoLink = `mailto:support@learnwords.store?subject=${subject}&body=${body}`;
+    window.open(mailtoLink, '_blank');
+    
+    toast({
+      title: "Email client opened!",
+      description: "Please send the email from your email application.",
+    });
+    
+    form.reset();
   };
 
   return (
@@ -270,9 +266,8 @@ const Contact: React.FC = () => {
                 <Button 
                   type="submit" 
                   className="w-full bg-primary hover:bg-primary/90"
-                  disabled={contactMutation.isPending}
                 >
-                  {contactMutation.isPending ? "Sending..." : "Send Message"}
+                  Send Message
                 </Button>
               </form>
             </Form>
