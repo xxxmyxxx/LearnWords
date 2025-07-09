@@ -31,7 +31,8 @@ jobs:
     - name: Clean and Install dependencies  
       run: |
         rm -f package-lock.json
-        npm install --legacy-peer-deps
+        npm cache clean --force
+        npm install
 
     - name: Build
       run: npm run build
