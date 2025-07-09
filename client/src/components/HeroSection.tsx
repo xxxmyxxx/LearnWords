@@ -47,11 +47,15 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative">
-              <img 
-                src={import.meta.env.BASE_URL + "attached_assets/front.png"} 
-                alt="Learn Words App Screenshot" 
-                className="rounded-2xl shadow-xl h-auto max-w-xs object-contain"
-              />
+              <div className="w-72 h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl shadow-xl flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                    <Download className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Learn Words App</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Available on mobile devices</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
