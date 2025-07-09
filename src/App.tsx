@@ -18,7 +18,7 @@ function AppRouter() {
 
 function App() {
   return (
-    <WouterRouter base="/LearnWords">
+    <WouterRouter base="/">
       <ThemeProvider defaultTheme="light" storageKey="learnwords-theme">
         <QueryClientProvider client={queryClient}>
           <TooltipProvider>

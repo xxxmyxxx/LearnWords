@@ -40,7 +40,7 @@ const updateMetaTags = () => {
     { property: 'og:title', content: 'Learn Words' },
     { property: 'og:description', content: 'Master vocabulary in 32 languages with Learn Words app. Interactive flash cards, competitions, and personalized learning paths.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://xxxmyxxx.github.io/LearnWords/' },
+    { property: 'og:url', content: 'https://learnwords.store/' },
   ];
   
   ogTags.forEach(tag => {
