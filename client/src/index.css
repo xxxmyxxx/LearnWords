@@ -62,15 +62,20 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins font-bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
   }
   
   html {
@@ -88,15 +93,15 @@
   }
   
   .traffic-light-green {
-    color: theme('colors.green.500');
+    color: #10b981;
   }
   
   .traffic-light-yellow {
-    color: theme('colors.yellow.500');
+    color: #f59e0b;
   }
   
   .traffic-light-red {
-    color: theme('colors.red.500');
+    color: #ef4444;
   }
 
   .animate-float {
