@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { languages } from "@/data/languages";
-import ReactCountryFlag from "react-country-flag";
 
 const container = {
   hidden: { opacity: 0 },
@@ -19,6 +18,10 @@ const item = {
 };
 
 const Languages: React.FC = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedLanguages = showAll ? languages : languages.slice(0, 20);
+  const remainingCount = languages.length - 20;
+
   return (
     <section id="languages" className="py-16 bg-gray-50 dark:bg-slate-900">
       <div className="container mx-auto px-4">
@@ -50,27 +53,32 @@ const Languages: React.FC = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          {languages.map((lang, index) => (
+          {displayedLanguages.map((lang, index) => (
             <motion.div 
               key={index}
               className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center space-x-3"
               variants={item}
             >
               <div className="flex-shrink-0">
-                <ReactCountryFlag
-                  countryCode={lang.flag}
-                  svg
-                  style={{
-                    width: '2em',
-                    height: '2em',
-                    borderRadius: '4px',
-                  }}
-                  title={lang.name}
+                <img 
+                  src={`https://flagcdn.com/48x36/${lang.flag}.png`}
+                  alt={`${lang.name} flag`}
+                  className="w-8 h-6 rounded-sm object-cover"
                 />
               </div>
               <span className="font-medium dark:text-gray-200">{lang.name}</span>
             </motion.div>
           ))}
+          
+          {!showAll && (
+            <motion.button
+              className="col-span-full bg-primary text-white rounded-lg p-4 text-center hover:bg-primary/90 transition mt-4"
+              onClick={() => setShowAll(true)}
+              variants={item}
+            >
+              <span className="font-medium">{`Show ${remainingCount} More Languages`}</span>
+            </motion.button>
+          )}
         </motion.div>
       </div>
     </section>
