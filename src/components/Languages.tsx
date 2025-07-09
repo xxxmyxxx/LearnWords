@@ -60,11 +60,13 @@ const Languages: React.FC = () => {
               variants={item}
             >
               <div className="flex-shrink-0">
-                <img 
-                  src={`https://flagcdn.com/48x36/${lang.flag}.png`}
-                  alt={`${lang.name} flag`}
-                  className="w-8 h-6 rounded-sm object-cover"
-                />
+                <span 
+                  className="text-2xl"
+                  role="img"
+                  aria-label={`${lang.name} flag`}
+                >
+                  {lang.flag}
+                </span>
               </div>
               <span className="font-medium dark:text-gray-200">{lang.name}</span>
             </motion.div>
