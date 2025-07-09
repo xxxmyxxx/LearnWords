@@ -1,13 +1,10 @@
 import React from "react";
-import { Link } from "wouter";
 import LogoIcon from "./LogoIcon";
 
 const features = [
   { name: "Flash Cards", href: "#features" },
   { name: "Competitions", href: "#features" },
   { name: "Progress Tracking", href: "#features" },
-  { name: "Custom Word Lists", href: "#features" },
-  { name: "32 Languages", href: "#languages" },
 ];
 
 const legal = [
