@@ -58,8 +58,7 @@ const Languages: React.FC = () => {
           className={`grid ${isMobile ? 'grid-cols-3' : 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8'} gap-4 max-w-5xl mx-auto`}
           variants={container}
           initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+          animate="show"
         >
           {displayedLanguages.map((lang, index) => (
             <motion.div 
