@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# dist klasörünü ignore et, ama 404.html dosyasını hariç tut
+!dist/404.html
