@@ -6,7 +6,6 @@ import {
   Trash2, 
   Lock, 
   Scale,
-  ExternalLink,
   ChevronRight
 } from "lucide-react";
 
