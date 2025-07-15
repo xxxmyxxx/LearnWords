@@ -18,9 +18,10 @@ const item = {
 };
 
 const Languages: React.FC = () => {
-  const [showAll, setShowAll] = useState(false);
-  const displayedLanguages = showAll ? languages : languages.slice(0, 20);
-  const remainingCount = languages.length - 20;
+  const [showAllMobile, setShowAllMobile] = useState(false);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const mobileLimit = 8;
+  const displayedLanguages = isMobile && !showAllMobile ? languages.slice(0, mobileLimit) : languages;
 
   return (
     <section id="languages" className="py-16 bg-gray-50 dark:bg-slate-900">
@@ -45,9 +46,8 @@ const Languages: React.FC = () => {
             Learn vocabulary in a wide range of languages from popular world languages to regional dialects.
           </motion.p>
         </div>
-        
         <motion.div 
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 max-w-5xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-5xl mx-auto"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -56,32 +56,31 @@ const Languages: React.FC = () => {
           {displayedLanguages.map((lang, index) => (
             <motion.div 
               key={index}
-              className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm hover:shadow-md transition flex items-center space-x-3"
+              className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm hover:shadow-md transition flex flex-col items-center"
               variants={item}
             >
-              <div className="flex-shrink-0">
-                <span 
-                  className="text-2xl"
-                  role="img"
-                  aria-label={`${lang.name} flag`}
-                >
-                  {lang.flag}
-                </span>
-              </div>
-              <span className="font-medium dark:text-gray-200">{lang.name}</span>
+              <span 
+                className="text-2xl mb-2"
+                role="img"
+                aria-label={`${lang.name} flag`}
+              >
+                {lang.flag}
+              </span>
+              <span className="font-medium dark:text-gray-200 text-center text-sm">{lang.name}</span>
             </motion.div>
           ))}
-          
-          {!showAll && (
-            <motion.button
-              className="col-span-full bg-primary text-white rounded-lg p-4 text-center hover:bg-primary/90 transition mt-4"
-              onClick={() => setShowAll(true)}
-              variants={item}
-            >
-              <span className="font-medium">{`Show ${remainingCount} More Languages`}</span>
-            </motion.button>
-          )}
         </motion.div>
+        {/* Mobilde daha fazlası için buton */}
+        <div className="sm:hidden flex justify-center mt-6">
+          {!showAllMobile && languages.length > mobileLimit && (
+            <button
+              className="bg-primary text-white rounded-lg px-6 py-2 text-center hover:bg-primary/90 transition font-medium"
+              onClick={() => setShowAllMobile(true)}
+            >
+              Daha fazlası için tıklayın
+            </button>
+          )}
+        </div>
       </div>
     </section>
   );

@@ -29,6 +29,6 @@ export const languages = [
   { name: "Romanian", flag: "🇷🇴", code: "RO" },
   { name: "Greek", flag: "🇬🇷", code: "GR" },
   { name: "American English", flag: "🇺🇸", code: "US" },
-  { name: "Portuguese (Portugal)", flag: "🇵🇹", code: "PT" },
-  { name: "Portuguese (Brazil)", flag: "🇧🇷", code: "BR" },
+  { name: "Portuguese", flag: "🇵🇹", code: "PT" },
+  { name: "Brazilian Portuguese", flag: "🇧🇷", code: "BR" },
 ];

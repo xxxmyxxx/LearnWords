@@ -8,19 +8,19 @@ const features = [
 ];
 
 const legal = [
-  { name: "Terms of Service", href: "#legal", tab: "terms-en" },
-  { name: "Privacy Policy", href: "#legal", tab: "privacy-en" },
-  { name: "Data Deletion", href: "#legal", tab: "deletion-en" },
-  { name: "KVKK Compliance", href: "#legal", tab: "kvkk-en" },
-  { name: "Turkish / Türkçe", href: "#legal", tab: "language" },
+  { name: "Terms of Service", href: "/terms" },
+  { name: "Privacy Policy", href: "/privacy" },
+  { name: "Data Deletion", href: "/data-deletion" },
+  { name: "Data Security", href: "/data-security" },
+  { name: "KVKK Compliance", href: "/kvkk" },
 ];
 
 const support = [
   { name: "Contact Us", href: "#contact" },
   { name: "FAQ", href: "#" },
   { name: "Help Center", href: "#" },
-  { name: "Report an Issue", href: "#" },
-  { name: "Feedback", href: "#" },
+  { name: "Report an Issue", href: "mailto:support@learnwords.store" },
+  { name: "Feedback", href: "mailto:support@learnwords.store" },
 ];
 
 const social = [
@@ -38,17 +38,6 @@ const Footer: React.FC = () => {
     }
   };
 
-  const scrollToTabSection = (sectionId: string, tabId: string) => {
-    scrollToSection(sectionId);
-    // Add a small delay to ensure the section is in view before trying to click the tab
-    setTimeout(() => {
-      const tabButton = document.querySelector(`[data-tab="${tabId}"]`) as HTMLElement;
-      if (tabButton) {
-        tabButton.click();
-      }
-    }, 100);
-  };
-
   return (
     <footer className="bg-slate-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -61,7 +50,7 @@ const Footer: React.FC = () => {
               </h3>
             </div>
             <p className="text-gray-400 mb-4">
-              Master vocabulary in 32 languages through interactive flash cards and personalized learning.
+              Master vocabulary in 30+ languages through interactive flash cards and personalized learning experiences.
             </p>
             <div className="flex space-x-4">
               {social.map((item) => (
@@ -130,12 +119,12 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {legal.map((item) => (
                 <li key={item.name}>
-                  <button
-                    onClick={() => scrollToTabSection(item.href.substring(1), item.tab)}
+                  <a
+                    href={item.href}
                     className="text-gray-400 hover:text-white transition"
                   >
                     {item.name}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -164,11 +153,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; 2025 Learn Words. All rights reserved.</p>
-          <p className="mt-2">
-            Learn Words is not affiliated with any language learning institution. Icon design based on traffic light concept.
-          </p>
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+            <div className="mb-4 md:mb-0">
+              <p>&copy; 2025 Learn Words. All rights reserved.</p>
+              <p className="mt-1">
+                Learn Words is not affiliated with any language learning institution.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 text-xs">
+              <a href="/privacy" className="hover:text-white transition">Privacy</a>
+              <a href="/terms" className="hover:text-white transition">Terms</a>
+              <a href="/kvkk" className="hover:text-white transition">KVKK</a>
+              <a href="mailto:support@learnwords.store" className="hover:text-white transition">Legal</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
