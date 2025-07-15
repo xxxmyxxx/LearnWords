@@ -5,11 +5,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import TermsOfService from "@/pages/TermsOfService";
-import DataDeletion from "@/pages/DataDeletion";
-import KVKKCompliance from "@/pages/KVKKCompliance";
-import DataSecurity from "@/pages/DataSecurity";
+import PrivacyPolicy from "@/pages/privacy";
+import TermsOfService from "@/pages/terms";
+import DataDeletion from "@/pages/data-deletion";
+import KVKKCompliance from "@/pages/kvkk";
+import DataSecurity from "@/pages/data-security";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 
 function AppRouter() {
