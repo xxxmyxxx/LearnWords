@@ -18,7 +18,7 @@ const KVKKCompliance: React.FC = () => {
         keywords={language === "tr"
           ? "KVKK, kişisel verilerin korunması, veri sahibi hakları, veri güvenliği, şeffaflık"
           : "KVKK, personal data protection, data subject rights, data security, transparency"}
-        canonical={`https://learnwords.store/kvkk`}
+        canonical={`https://www.learnwords.store/kvkk`}
         language={language}
       />
       {/* Header */}

@@ -18,7 +18,7 @@ const TermsOfService: React.FC = () => {
           keywords={language === "en"
             ? "terms of service, user agreement, fair usage, learn words, language learning"
             : "kullanım koşulları, kullanıcı sözleşmesi, adil kullanım, kelime öğrenme, dil öğrenme"}
-          canonical={`https://learnwords.store/terms`}
+          canonical={`https://www.learnwords.store/terms`}
           language={language}
         />
       {/* Header */}

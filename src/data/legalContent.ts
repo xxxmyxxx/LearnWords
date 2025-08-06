@@ -220,7 +220,7 @@ export const deletionEn = [
   },
   {
     title: "2. How to Request Data Deletion",
-    content: "To delete your account and data, you can: Use the 'Delete Account' option in the app's Profile Settings, Send an email to support@learnwords.store with subject 'Data Deletion Request', Contact our support team at support@learnwords.store, Use our online data request form at learnwords.store/data-request. For verification purposes, we may ask you to confirm your identity using the email address associated with your account."
+    content: "To delete your account and data, you can: Use the 'Delete Account' option in the app's Profile Settings, Send an email to support@learnwords.store with subject 'Data Deletion Request', Contact our support team at support@learnwords.store, Use our online data request form at www.learnwords.store/data-request. For verification purposes, we may ask you to confirm your identity using the email address associated with your account."
   },
   {
     title: "3. What Data Gets Deleted",
@@ -267,7 +267,7 @@ export const deletionTr = [
   },
   {
     title: "2. Veri Silme Talebi Nasıl Yapılır",
-    content: "Hesabınızı ve verilerinizi silmek için şunları yapabilirsiniz: Uygulamanın Profil Ayarlarında 'Hesabı Sil' seçeneğini kullanın, support@learnwords.store adresine 'Veri Silme Talebi' konusuyla e-posta gönderin, support@learnwords.store adresindeki destek ekibimizle iletişime geçin, learnwords.store/data-request adresindeki çevrimiçi veri talep formumuzu kullanın. Doğrulama amacıyla, hesabınızla ilişkili e-posta adresini kullanarak kimliğinizi onaylamanızı isteyebiliriz."
+    content: "Hesabınızı ve verilerinizi silmek için şunları yapabilirsiniz: Uygulamanın Profil Ayarlarında 'Hesabı Sil' seçeneğini kullanın, support@learnwords.store adresine 'Veri Silme Talebi' konusuyla e-posta gönderin, support@learnwords.store adresindeki destek ekibimizle iletişime geçin, www.learnwords.store/data-request adresindeki çevrimiçi veri talep formumuzu kullanın. Doğrulama amacıyla, hesabınızla ilişkili e-posta adresini kullanarak kimliğinizi onaylamanızı isteyebiliriz."
   },
   {
     title: "3. Hangi Veriler Silinir",
@@ -354,7 +354,7 @@ export const dataSecurityEn = [
   },
   {
     title: "12. Reporting Security Issues",
-    content: "We encourage responsible disclosure of security vulnerabilities: Security contact: support@learnwords.store, 24-hour response commitment for critical security issues, Responsible disclosure program with recognition for valid findings, Coordinated vulnerability disclosure following industry standards, Bug bounty program for security researchers (details at learnwords.store/security), Secure communication channels for sensitive security reports, No legal action against good-faith security research within our guidelines."
+    content: "We encourage responsible disclosure of security vulnerabilities: Security contact: support@learnwords.store, 24-hour response commitment for critical security issues, Responsible disclosure program with recognition for valid findings, Coordinated vulnerability disclosure following industry standards, Bug bounty program for security researchers (details at www.learnwords.store/security), Secure communication channels for sensitive security reports, No legal action against good-faith security research within our guidelines."
   }
 ];
 
@@ -405,7 +405,7 @@ export const dataSecurityTr = [
   },
   {
     title: "12. Güvenlik Sorunlarını Bildirme",
-    content: "Güvenlik açıklarının sorumlu açıklanmasını teşvik ediyoruz: Güvenlik iletişim: support@learnwords.store, Kritik güvenlik sorunları için 24 saatlik yanıt taahhüdü, Geçerli bulgular için tanımayla sorumlu açıklama programı, Endüstri standartlarını takip eden koordineli güvenlik açığı açıklaması, Güvenlik araştırmacıları için hata ödülü programı (detaylar learnwords.store/security'de), Hassas güvenlik raporları için güvenli iletişim kanalları, Kılavuzlarımız dahilinde iyi niyetli güvenlik araştırmasına karşı yasal işlem yapılmaz."
+    content: "Güvenlik açıklarının sorumlu açıklanmasını teşvik ediyoruz: Güvenlik iletişim: support@learnwords.store, Kritik güvenlik sorunları için 24 saatlik yanıt taahhüdü, Geçerli bulgular için tanımayla sorumlu açıklama programı, Endüstri standartlarını takip eden koordineli güvenlik açığı açıklaması, Güvenlik araştırmacıları için hata ödülü programı (detaylar www.learnwords.store/security'de), Hassas güvenlik raporları için güvenli iletişim kanalları, Kılavuzlarımız dahilinde iyi niyetli güvenlik araştırmasına karşı yasal işlem yapılmaz."
   }
 ];
 
@@ -463,7 +463,7 @@ export const kvkkTr = [
   },
   {
     title: "11. Başvuru Yolları ve İletişim",
-    content: "KVKK haklarınızı kullanmak için başvuru yolları: E-posta: support@learnwords.store, Başvuru Formu: learnwords.store/kvkk-basvuru, Posta: Learn Words KVKK Sorumlusu, İstanbul, Türkiye, Uygulama İçi: Hesap ayarlarından veri yönetimi. Başvurularınız: 30 gün içinde sonuçlandırılır, Kimlik teyidi yapılarak işleme alınır, Yazılı veya elektronik ortamda yanıtlanır, Red durumunda gerekçesi ve itiraz yolları bildirilir, Ücretsizdir (kopyalama maliyeti hariç)."
+    content: "KVKK haklarınızı kullanmak için başvuru yolları: E-posta: support@learnwords.store, Başvuru Formu: www.learnwords.store/kvkk-basvuru, Posta: Learn Words KVKK Sorumlusu, İstanbul, Türkiye, Uygulama İçi: Hesap ayarlarından veri yönetimi. Başvurularınız: 30 gün içinde sonuçlandırılır, Kimlik teyidi yapılarak işleme alınır, Yazılı veya elektronik ortamda yanıtlanır, Red durumunda gerekçesi ve itiraz yolları bildirilir, Ücretsizdir (kopyalama maliyeti hariç)."
   },
   {
     title: "12. KVKK Uyum Süreçlerimiz",
@@ -525,7 +525,7 @@ export const kvkkEn = [
   },
   {
     title: "11. Application Methods and Contact",
-    content: "Application methods to exercise your KVKK rights: Email: support@learnwords.store, Application Form: learnwords.store/kvkk-application, Mail: Learn Words KVKK Officer, Istanbul, Turkey, In-App: Data management from account settings. Your applications: Are concluded within 30 days, Are processed after identity verification, Are answered in written or electronic form, Grounds and appeal methods are notified in case of rejection, Are free of charge (except copying costs)."
+    content: "Application methods to exercise your KVKK rights: Email: support@learnwords.store, Application Form: www.learnwords.store/kvkk-application, Mail: Learn Words KVKK Officer, Istanbul, Turkey, In-App: Data management from account settings. Your applications: Are concluded within 30 days, Are processed after identity verification, Are answered in written or electronic form, Grounds and appeal methods are notified in case of rejection, Are free of charge (except copying costs)."
   },
   {
     title: "12. Our KVKK Compliance Processes",

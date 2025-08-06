@@ -8,11 +8,11 @@ const features = [
 ];
 
 const legal = [
-  { name: "Terms of Service", href: "/terms" },
-  { name: "Privacy Policy", href: "/privacy" },
-  { name: "Data Deletion", href: "/data-deletion" },
-  { name: "Data Security", href: "/data-security" },
-  { name: "KVKK Compliance", href: "/kvkk" },
+  { name: "Terms of Service", href: "https://www.learnwords.store/terms" },
+  { name: "Privacy Policy", href: "https://www.learnwords.store/privacy" },
+  { name: "Data Deletion", href: "https://www.learnwords.store/data-deletion" },
+  { name: "Data Security", href: "https://www.learnwords.store/data-security" },
+  { name: "KVKK Compliance", href: "https://www.learnwords.store/kvkk" },
 ];
 
 const support = [
@@ -162,9 +162,9 @@ const Footer: React.FC = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4 text-xs">
-              <a href="/privacy" className="hover:text-white transition">Privacy</a>
-              <a href="/terms" className="hover:text-white transition">Terms</a>
-              <a href="/kvkk" className="hover:text-white transition">KVKK</a>
+              <a href="https://www.learnwords.store/privacy" className="hover:text-white transition">Privacy</a>
+              <a href="https://www.learnwords.store/terms" className="hover:text-white transition">Terms</a>
+              <a href="https://www.learnwords.store/kvkk" className="hover:text-white transition">KVKK</a>
               <a href="mailto:support@learnwords.store" className="hover:text-white transition">Legal</a>
             </div>
           </div>

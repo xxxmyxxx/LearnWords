@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         title="Learn Words - Master Vocabulary in 30+ Languages"
         description="Learn vocabulary efficiently with interactive flashcards, spaced repetition, and personalized learning. Support for 30+ languages including English, Spanish, French, German, and more."
         keywords="vocabulary learning, flashcards, language learning, spaced repetition, multilingual, education app"
-        canonical="https://learnwords.store"
+        canonical="https://www.learnwords.store"
         language="en"
       />
       <div className="min-h-screen bg-background text-foreground">

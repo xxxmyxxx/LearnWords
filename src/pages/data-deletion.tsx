@@ -18,7 +18,7 @@ const DataDeletion: React.FC = () => {
         keywords={language === "en"
           ? "data deletion, delete account, right to erasure, GDPR, data privacy, learn words"
           : "veri silme, hesap silme, unutulma hakkı, GDPR, veri gizliliği, kelime öğrenme"}
-        canonical={`https://learnwords.store/data-deletion`}
+        canonical={`https://www.learnwords.store/data-deletion`}
         language={language}
       />
       {/* Header */}

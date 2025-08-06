@@ -18,7 +18,7 @@ const PrivacyPolicy: React.FC = () => {
         keywords={language === "en"
           ? "privacy policy, data protection, personal information, GDPR, CCPA, KVKK, learn words"
           : "gizlilik politikası, veri koruması, kişisel bilgiler, GDPR, CCPA, KVKK, kelime öğrenme"}
-        canonical={`https://learnwords.store/privacy`}
+        canonical={`https://www.learnwords.store/privacy`}
         language={language}
       />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">

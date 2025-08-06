@@ -18,7 +18,7 @@ const DataSecurity: React.FC = () => {
         keywords={language === "en"
           ? "data security, encryption, AES-256, TLS SSL, SOC 2, security monitoring, cybersecurity"
           : "veri güvenliği, şifreleme, AES-256, TLS SSL, SOC 2, güvenlik izleme, siber güvenlik"}
-        canonical={`https://learnwords.store/data-security`}
+        canonical={`https://www.learnwords.store/data-security`}
         language={language}
       />
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -228,7 +228,7 @@ const DataSecurity: React.FC = () => {
                   </a>
                   <span className="text-gray-400">•</span>
                   <a 
-                    href="/security" 
+                    href="https://www.learnwords.store/security" 
                     className="text-primary hover:text-primary/80 transition-colors"
                   >
                     {language === "en" ? "Security Program" : "Güvenlik Programı"}

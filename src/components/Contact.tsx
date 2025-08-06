@@ -129,7 +129,7 @@ ${data.message}
                 </div>
                 <div>
                   <h4 className="font-medium mb-1 dark:text-white">Website</h4>
-                  <p className="text-gray-600 dark:text-gray-300">learnwords.store</p>
+                  <p className="text-gray-600 dark:text-gray-300">www.learnwords.store</p>
                 </div>
               </div>
               
