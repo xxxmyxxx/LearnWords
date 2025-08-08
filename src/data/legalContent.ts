@@ -122,23 +122,23 @@ export const termsTr = [
 export const privacyEn = [
   {
     title: "1. Information We Collect",
-    content: "Learn Words collects information to provide and improve our language learning services. We collect: Personal Information you provide directly (name, email address when creating an account), Account Information from third-party sign-ins (Google: name, email, profile picture; Apple: name and email, with user control over sharing), Usage Data (learning progress, quiz scores, time spent, features used), Device Information (device type, operating system version, unique device identifiers), Location Data (general location for localized content, not precise location tracking). We only collect data necessary for app functionality and improving your learning experience."
+    content: "We collect only the data necessary to operate the app, provide your account, and improve learning features. What we store on our servers (Supabase): Account and profile data (user ID, email, display name, profile photo), Language preferences (desired and native language codes, level), Usage/progress metadata relevant to cloud features (experience points, current rank, premium status and expiry, last login time, preferences), Gameplay data (game results and related records used for competitions and leaderboards). What stays on your device: Most study data, local word lists and learning history are stored locally on your device (SQLite) and are not uploaded unless you enable features that sync them. Passwords are not stored by us; sign-in is handled by providers (Google, Apple, Facebook). We do not collect data beyond what is listed here. If we introduce features that require additional data (e.g., syncing study schedules like FSRS), we will clearly inform you in‑app and update this Policy and store disclosures before processing."
   },
   {
     title: "2. How We Use Your Information", 
-    content: "We use collected information to: Provide personalized learning experiences and track your progress, Sync your data across devices when you're signed in, Send important notifications about your learning streaks and achievements, Improve our app features and algorithms based on usage patterns, Provide customer support and respond to your inquiries, Comply with legal obligations and protect against fraud, Send optional marketing communications (with your consent). We do not sell your personal information to third parties for advertising purposes."
+    content: "We use collected information to: Provide your account and core functionality, Personalize learning and track progress where cloud features are used, Power gameplay features (results, leaderboards), Improve app features and algorithms based on usage and analytics, Provide support and comply with legal obligations. We use Google Analytics for product analytics (not for advertising). We do not sell your personal information or use cross-app tracking."
   },
   {
     title: "3. Information Sharing and Third-Party Services",
-    content: "We share your information only in limited circumstances: Service Providers: Supabase (data storage and authentication), analytics services for app improvement, cloud infrastructure providers. Legal Requirements: when required by law, court order, or to protect our rights and safety. Business Transfers: in case of merger, acquisition, or sale of assets (with notice to users). With Your Consent: when you explicitly agree to sharing for specific purposes. We never sell your personal data. Third-party services we use have their own privacy policies and security measures."
+    content: "We share data only as needed to operate the app: Service providers: Supabase (authentication and database), Google Analytics (product analytics). OAuth providers (Google, Apple, Facebook) authenticate you but do not share your password with us. We do not sell personal data. We may disclose information if required by law or to protect our rights and users."
   },
   {
     title: "4. Data Security and Storage",
-    content: "We implement industry-standard security measures: All data transmitted between your device and our servers is encrypted using TLS/SSL protocols, Stored data is encrypted at rest using AES-256 encryption, Access to user data is limited to authorized personnel only, Regular security audits and vulnerability assessments, Secure authentication systems with optional two-factor authentication. While we strive to protect your data, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security but follow best practices to minimize risks."
+    content: "We use industry-standard protections. All communications occur over encrypted connections (TLS). Stored data on our provider (Supabase) is encrypted at rest. Access to data is restricted and logged. We use Supabase Auth (JWT) and PostgreSQL Row Level Security (RLS) so each user can access only their own records through our policies. Secrets such as service keys are kept server-side only; the client uses only the public anon key. No security method is perfect, but we follow best practices to reduce risk."
   },
   {
     title: "5. Your Privacy Rights and Choices",
-    content: "You have the right to: Access your personal data and download a copy, Correct inaccurate or incomplete information, Delete your account and associated data, Opt out of marketing communications, Control data sharing with third parties, Port your data to another service. EU/EEA residents have additional rights under GDPR, including data portability and the right to object to processing. To exercise these rights, contact us at support@learnwords.store or use the in-app data management tools."
+    content: "You can access and update your data, delete your account and associated data (in-app Settings → Delete Account or by emailing us), and request a copy of your data. EU/EEA residents have additional rights under GDPR. Turkish users have rights under KVKK. Use in-app tools or contact support@learnwords.store."
   },
   {
     title: "6. Children's Privacy and COPPA",
@@ -169,23 +169,23 @@ export const privacyEn = [
 export const privacyTr = [
   {
     title: "1. Topladığımız Bilgiler",
-    content: "Learn Words, dil öğrenme hizmetlerimizi sunmak ve geliştirmek için bilgi toplar. Topladığımız bilgiler: Doğrudan sağladığınız Kişisel Bilgiler (hesap oluştururken ad, e-posta adresi), Üçüncü taraf oturum açma bilgileri (Google: ad, e-posta, profil fotoğrafı; Apple: kullanıcının paylaşım kontrolüyle ad ve e-posta), Kullanım Verileri (öğrenme ilerlemesi, sınav puanları, harcanan zaman, kullanılan özellikler), Cihaz Bilgileri (cihaz türü, işletim sistemi sürümü, benzersiz cihaz tanımlayıcıları), Konum Verileri (yerelleştirilmiş içerik için genel konum, hassas konum takibi değil). Yalnızca uygulama işlevselliği ve öğrenme deneyiminizi geliştirmek için gerekli verileri toplarız."
+    content: "Yalnızca uygulamayı çalıştırmak, hesabınızı sağlamak ve öğrenme özelliklerini geliştirmek için gerekli verileri toplarız. Sunucularda (Supabase) saklananlar: Hesap ve profil verileri (kullanıcı kimliği, e‑posta, görünen ad, profil fotoğrafı), Dil tercihleri (hedef ve ana dil kodları, seviye), Bulut özellikleriyle ilgili kullanım/ilerleme metadatası (deneyim puanı, mevcut rütbe, premium durumu ve bitiş tarihi, son giriş zamanı, tercihler), Oyun/yarışma verileri (liderlik tabloları ve karşılaştırmalar için oyun sonuçları). Cihazınızda kalanlar: Çoğu çalışma verisi, yerel kelime listeleri ve öğrenme geçmişi cihazınızda (SQLite) saklanır ve eşitleme özelliklerini etkinleştirmedikçe sunucuya yüklenmez. Parolalar bizde tutulmaz; oturum açma sağlayıcılar (Google, Apple, Facebook) tarafından yönetilir. Bu listelenenlerin ötesinde veri toplamayız. Gelecekte ek veri gerektiren özellikler (ör. FSRS gibi çalışma programlarının eşitlenmesi) sunarsak, uygulama içinde açıkça bilgilendirir, bu Politikayı ve mağaza beyanlarını güncelledikten sonra işleriz."
   },
   {
     title: "2. Bilgilerinizi Nasıl Kullanıyoruz",
-    content: "Toplanan bilgileri şunlar için kullanırız: Kişiselleştirilmiş öğrenme deneyimleri sağlamak ve ilerlemenizi takip etmek, Oturum açtığınızda verilerinizi cihazlar arası senkronize etmek, Öğrenme serileriniz ve başarılarınız hakkında önemli bildirimler göndermek, Kullanım kalıplarına dayalı uygulama özelliklerini ve algoritmalarını geliştirmek, Müşteri desteği sağlamak ve sorularınızı yanıtlamak, Yasal yükümlülüklere uymak ve dolandırıcılığa karşı korumak, İsteğe bağlı pazarlama iletişimleri göndermek (onayınızla). Kişisel bilgilerinizi reklam amaçlı üçüncü taraflara satmıyoruz."
+    content: "Toplanan bilgileri şunlar için kullanırız: Hesabınızı ve temel işlevleri sağlamak, Bulut özellikleri kullanıldığında kişiselleştirme ve ilerleme takibi, Oyun özelliklerini çalıştırmak (sonuçlar, liderlik tabloları), Ürün analitiği ile uygulamayı iyileştirmek (Google Analytics), Destek ve yasal yükümlülüklere uyum. Reklam amaçlı satış yapmayız ve çapraz uygulama takibi kullanmayız."
   },
   {
     title: "3. Bilgi Paylaşımı ve Üçüncü Taraf Hizmetler",
-    content: "Bilgilerinizi yalnızca sınırlı durumlarda paylaşırız: Hizmet Sağlayıcıları: Supabase (veri depolama ve kimlik doğrulama), uygulama iyileştirme için analitik hizmetler, bulut altyapısı sağlayıcıları. Yasal Gereksinimler: yasa, mahkeme kararı veya haklarımızı ve güvenliğimizi korumak için gerektiğinde. İş Transferleri: birleşme, satın alma veya varlık satışı durumunda (kullanıcılara bildirimle). Onayınızla: belirli amaçlar için paylaşımı açıkça kabul ettiğinizde. Kişisel verilerinizi asla satmayız. Kullandığımız üçüncü taraf hizmetlerin kendi gizlilik politikaları ve güvenlik önlemleri vardır."
+    content: "Verileri yalnızca uygulamayı işletmek için gerekli olduğu ölçüde işler/paylaşırız: Hizmet sağlayıcıları: Supabase (kimlik doğrulama ve veritabanı), Google Analytics (ürün analitiği). OAuth sağlayıcıları (Google, Apple, Facebook) sizi doğrular; parolanızı bizimle paylaşmaz. Kişisel verileri satmayız. Yasal zorunluluk halinde veya haklarımızı/kullanıcılarımızı korumak için açıklama yapabiliriz."
   },
   {
     title: "4. Veri Güvenliği ve Depolama",
-    content: "Endüstri standardı güvenlik önlemleri uygularız: Cihazınız ve sunucularımız arasında aktarılan tüm veriler TLS/SSL protokolleri kullanılarak şifrelenir, Depolanan veriler AES-256 şifreleme kullanılarak beklerken şifrelenir, Kullanıcı verilerine erişim yalnızca yetkili personelle sınırlıdır, Düzenli güvenlik denetimleri ve güvenlik açığı değerlendirmeleri, İsteğe bağlı iki faktörlü kimlik doğrulamayla güvenli kimlik doğrulama sistemleri. Verilerinizi korumaya çalışırken, internet üzerinden hiçbir aktarım yöntemi %100 güvenli değildir. Mutlak güvenliği garanti edemeyiz ancak riskleri en aza indirmek için en iyi uygulamaları izleriz."
+    content: "Endüstri standardı korumalar kullanırız. Tüm iletişim şifreli bağlantılar (TLS) üzerinden gerçekleşir. Sağlayıcı ortamında (Supabase) depolanan veriler beklemede şifrelenir. Erişim yetkileri sınırlandırılır ve kayda alınır. Supabase Auth (JWT) ve PostgreSQL Satır Düzeyi Güvenlik (RLS) ile her kullanıcı yalnızca kendi kayıtlarına erişir. Gizli anahtarlar sunucu tarafında tutulur; istemci yalnızca genel anon anahtarını kullanır. Hiçbir yöntem %100 güvenli değildir; riski azaltmak için iyi uygulamaları izleriz."
   },
   {
     title: "5. Gizlilik Haklarınız ve Seçimleriniz",
-    content: "Şu haklara sahipsiniz: Kişisel verilerinize erişmek ve kopyasını indirmek, Yanlış veya eksik bilgileri düzeltmek, Hesabınızı ve ilişkili verileri silmek, Pazarlama iletişimlerinden çıkmak, Üçüncü taraflarla veri paylaşımını kontrol etmek, Verilerinizi başka bir hizmete taşımak. AB/AEA sakinleri GDPR kapsamında veri taşınabilirliği ve işlemeye itiraz etme hakkı dahil ek haklara sahiptir. Bu hakları kullanmak için support@learnwords.store adresinden bizimle iletişime geçin veya uygulama içi veri yönetim araçlarını kullanın."
+    content: "Verilerinize erişebilir ve güncelleyebilir, hesabınızı ve ilişkili verileri silebilirsiniz (Uygulama → Ayarlar → Hesabı Sil veya e‑posta ile). Verilerinizin bir kopyasını talep edebilirsiniz. AB/AEA kullanıcıları için GDPR, Türkiye’deki kullanıcılar için KVKK kapsamındaki haklar geçerlidir. Uygulama içi araçları kullanın veya support@learnwords.store ile iletişime geçin."
   },
   {
     title: "6. Çocukların Gizliliği ve COPPA",
@@ -310,102 +310,102 @@ export const deletionTr = [
 export const dataSecurityEn = [
   {
     title: "1. Our Security Commitment",
-    content: "Learn Words is committed to protecting your personal data with industry-leading security measures. We understand that your trust is earned through consistent demonstration of security best practices. Our security framework covers data in transit, at rest, and in processing, with regular audits and updates to maintain the highest standards. We comply with international security standards including ISO 27001 principles and follow OWASP guidelines for application security."
+    content: "We protect your personal data using industry-standard security practices. Our approach covers data in transit, at rest, and access control. We regularly review our policies and configurations to maintain a strong security baseline."
   },
   {
     title: "2. Data Encryption Standards",
-    content: "We use military-grade encryption to protect your data: Data in Transit: All communications between your device and our servers use TLS 1.3 encryption with perfect forward secrecy, Data at Rest: Your stored data is encrypted using AES-256 encryption with unique keys per user, Database Encryption: All database connections use encrypted channels with certificate pinning, API Security: All API endpoints require authentication and use HTTPS exclusively. Encryption keys are managed using industry-standard key management systems with regular rotation."
+    content: "Encryption in transit and at rest: All communications are protected with TLS. Data stored by our provider (Supabase) is encrypted at rest. We avoid making unverifiable claims (e.g., specific ciphers or key rotation internals) and instead describe our actual setup accurately."
   },
   {
     title: "3. Access Controls and Authentication",
-    content: "We implement strict access controls to ensure only authorized personnel can access user data: Multi-Factor Authentication (MFA) required for all staff accounts, Role-based access control (RBAC) limiting data access to job function requirements, Regular access reviews and immediate revocation upon role changes, Principle of least privilege applied to all system access, API authentication using OAuth 2.0 and JWT tokens with short expiration times, Session management with automatic timeout and secure session tokens."
+    content: "We use Supabase Auth with JWT-based authentication. Access to application data is enforced with PostgreSQL Row Level Security (RLS) so users only access their own records via our policies. Operational access is limited to authorized personnel following the principle of least privilege."
   },
   {
     title: "4. Infrastructure Security",
-    content: "Our technical infrastructure is designed with security as a primary concern: Cloud hosting with enterprise-grade security (AWS/Google Cloud), Network segmentation with firewall protection and intrusion detection, Regular security patching and automated vulnerability scanning, DDoS protection and traffic monitoring, Secure development lifecycle (SDLC) with security reviews at each stage, Container security with image scanning and runtime protection, Database access through encrypted connections only."
+    content: "We rely on managed infrastructure and Supabase services. Connections to the database occur over encrypted channels. We keep dependencies updated and review configurations regularly."
   },
   {
     title: "5. Data Backup and Recovery",
-    content: "We maintain secure backup systems to ensure data availability while protecting your privacy: Encrypted backups stored in geographically distributed data centers, Point-in-time recovery capabilities with 30-day retention, Automated backup testing to ensure recovery procedures work correctly, Air-gapped backup storage to protect against ransomware, Regular disaster recovery drills and documented procedures, All backup data subject to the same encryption and access controls as primary data."
+    content: "Backups and disaster recovery are handled by our managed provider according to their standard practices. Backup data is subject to the same at-rest encryption controls. We do not state specific retention windows publicly as these may change with provider configuration."
   },
   {
     title: "6. Security Monitoring and Incident Response",
-    content: "We maintain 24/7 security monitoring and have comprehensive incident response procedures: Real-time security monitoring with automated threat detection, Log analysis and anomaly detection for suspicious activities, Incident response team with defined escalation procedures, Data breach notification procedures compliant with GDPR, CCPA, and KVKK, Security Operations Center (SOC) monitoring for advanced persistent threats, Regular penetration testing by third-party security firms, Vulnerability disclosure program for security researchers."
+    content: "We review logs and security signals provided by our platform and application to detect unusual activity and respond. In case of a data incident, we notify users and authorities as required by GDPR/KVKK/Google Play policies."
   },
   {
     title: "7. Employee Security Training",
-    content: "Our team members are trained in security best practices and data protection: Mandatory security awareness training for all employees, Specialized training for developers on secure coding practices, Regular phishing simulation exercises, Data protection training covering GDPR, CCPA, and KVKK requirements, Background checks for employees with access to sensitive systems, Non-disclosure agreements and security policies acknowledgment, Ongoing security education and certification programs."
+    content: "We encourage secure development and operational practices, including least-privilege access and periodic reviews."
   },
   {
     title: "8. Third-Party Security",
-    content: "We carefully vet all third-party services and ensure they meet our security standards: Due diligence security assessments for all vendors, Data processing agreements (DPAs) with strict security requirements, Regular security audits of critical third-party services, Vendor risk management program with ongoing monitoring, Secure integration practices with third-party APIs, Contractual obligations for security breach notifications, Limited data sharing following the principle of data minimization."
+    content: "We minimize third-party usage and integrate only services necessary to run the app (e.g., Supabase, Google Analytics). We follow data minimization and review critical third-party configurations periodically."
   },
   {
     title: "9. Mobile App Security",
-    content: "Our mobile applications incorporate security best practices: Code obfuscation and anti-tampering measures, Certificate pinning to prevent man-in-the-middle attacks, Secure local storage with device-level encryption, Biometric authentication support where available, Runtime Application Self-Protection (RASP) techniques, Regular security updates through app store distributions, Source code security scanning and dependency vulnerability checks."
+    content: "We keep app dependencies up to date and avoid storing secrets in the client. Local data uses the device’s storage; sensitive operations require authentication."
   },
   {
     title: "10. Compliance and Auditing",
-    content: "We maintain compliance with international data protection and security standards: GDPR compliance for EU users with regular assessments, CCPA compliance for California residents, KVKK compliance for Turkish users, SOC 2 Type II audits for service organization controls, ISO 27001 information security management principles, Regular internal security audits and external penetration testing, Compliance monitoring and reporting to relevant authorities when required."
+    content: "We aim to comply with applicable privacy laws (e.g., GDPR for EU users, KVKK in Turkey) and platform policies (Apple, Google Play). We do not claim certifications we do not hold."
   },
   {
     title: "11. Your Security Responsibilities",
-    content: "While we implement comprehensive security measures, your cooperation helps maintain overall security: Use strong, unique passwords for your account, Enable two-factor authentication when available, Keep your app updated to the latest version, Report suspicious activity or security concerns immediately, Use trusted networks and avoid public Wi-Fi for sensitive activities, Review and understand privacy settings and data sharing options, Contact us immediately if you suspect your account has been compromised."
+    content: "You can help keep your account secure by using strong device authentication, keeping the app updated, and reporting suspicious activity to support@learnwords.store."
   },
   {
     title: "12. Reporting Security Issues",
-    content: "We encourage responsible disclosure of security vulnerabilities: Security contact: support@learnwords.store, 24-hour response commitment for critical security issues, Responsible disclosure program with recognition for valid findings, Coordinated vulnerability disclosure following industry standards, Bug bounty program for security researchers (details at www.learnwords.store/security), Secure communication channels for sensitive security reports, No legal action against good-faith security research within our guidelines."
+    content: "If you believe you have found a security issue, please contact support@learnwords.store. We will review and address reports in a timely manner and inform affected users where necessary."
   }
 ];
 
 export const dataSecurityTr = [
   {
     title: "1. Güvenlik Taahhüdümüz",
-    content: "Learn Words, kişisel verilerinizi endüstri lideri güvenlik önlemleriyle koruma taahhüdündedir. Güveninizin güvenlik en iyi uygulamalarının tutarlı gösterimi yoluyla kazanıldığını anlıyoruz. Güvenlik çerçevemiz transit, sabit ve işleme halindeki verileri kapsar, en yüksek standartları korumak için düzenli denetimler ve güncellemeler yapar. ISO 27001 ilkeleri dahil uluslararası güvenlik standartlarına uyuyoruz ve uygulama güvenliği için OWASP kılavuzlarını takip ediyoruz."
+    content: "Kişisel verilerinizi endüstri standardı güvenlik uygulamalarıyla koruruz. Yaklaşımımız; iletim, depolama ve erişim kontrolünü kapsar. Güvenlik yapılandırmalarımızı düzenli olarak gözden geçiririz."
   },
   {
     title: "2. Veri Şifreleme Standartları",
-    content: "Verilerinizi korumak için askeri sınıf şifreleme kullanıyoruz: Transit Halindeki Veriler: Cihazınız ve sunucularımız arasındaki tüm iletişimler mükemmel ileri gizlilik ile TLS 1.3 şifrelemesi kullanır, Sakin Halindeki Veriler: Depolanan verileriniz kullanıcı başına benzersiz anahtarlarla AES-256 şifrelemesi kullanılarak şifrelenir, Veritabanı Şifrelemesi: Tüm veritabanı bağlantıları sertifika sabitlemeyle şifreli kanallar kullanır, API Güvenliği: Tüm API uç noktaları kimlik doğrulama gerektirir ve yalnızca HTTPS kullanır. Şifreleme anahtarları düzenli rotasyonla endüstri standardı anahtar yönetim sistemleri kullanılarak yönetilir."
+    content: "İletimde ve beklemede şifreleme: Tüm iletişim TLS ile korunur. Sağlayıcımız (Supabase) üzerinde saklanan veriler beklemede şifrelenir. Spesifik şifreler/anahtar iç süreçlerine dair doğrulanamayan iddialar yerine fiili kurulumumuzu doğru ve yalın biçimde açıklarız."
   },
   {
     title: "3. Erişim Kontrolleri ve Kimlik Doğrulama",
-    content: "Yalnızca yetkili personelin kullanıcı verilerine erişebilmesini sağlamak için sıkı erişim kontrolleri uygularız: Tüm personel hesapları için Çok Faktörlü Kimlik Doğrulama (MFA) gerekli, İş fonksiyonu gereksinimlerine veri erişimini sınırlayan rol tabanlı erişim kontrolü (RBAC), Düzenli erişim incelemeleri ve rol değişikliklerinde anında iptal, Tüm sistem erişiminde en az ayrıcalık ilkesi uygulanır, Kısa sona erme süreleriyle OAuth 2.0 ve JWT tokenları kullanan API kimlik doğrulaması, Otomatik zaman aşımı ve güvenli oturum tokenlarıyla oturum yönetimi."
+    content: "Supabase Auth ile JWT tabanlı kimlik doğrulama kullanırız. Uygulama verilerine erişim PostgreSQL Satır Düzeyi Güvenlik (RLS) ile uygulanır; politikalarımız sayesinde kullanıcılar yalnızca kendi kayıtlarına erişir. Operasyonel erişim, en az ayrıcalık ilkesiyle yetkilendirilmiş personelle sınırlıdır."
   },
   {
     title: "4. Altyapı Güvenliği",
-    content: "Teknik altyapımız güvenliği birincil endişe olarak tasarlanmıştır: Kurumsal sınıf güvenlikle bulut barındırma (AWS/Google Cloud), Güvenlik duvarı koruması ve saldırı tespiti ile ağ segmentasyonu, Düzenli güvenlik yamaları ve otomatik güvenlik açığı taraması, DDoS koruması ve trafik izleme, Her aşamada güvenlik incelemeleriyle Güvenli geliştirme yaşam döngüsü (SDLC), Görüntü tarama ve çalışma zamanı korumasıyla konteyner güvenliği, Yalnızca şifreli bağlantılar üzerinden veritabanı erişimi."
+    content: "Yönetilen altyapı ve Supabase hizmetlerinden yararlanırız. Veritabanına bağlantılar şifreli kanallar üzerinden yapılır. Bağımlılıkları güncel tutar, yapılandırmaları periyodik olarak gözden geçiririz."
   },
   {
     title: "5. Veri Yedekleme ve Kurtarma",
-    content: "Gizliliğinizi korurken veri kullanılabilirliğini sağlamak için güvenli yedekleme sistemleri sürdürüyoruz: Coğrafi olarak dağıtılmış veri merkezlerinde depolanan şifreli yedeklemeler, 30 günlük saklama ile zamanında kurtarma yetenekleri, Kurtarma prosedürlerinin doğru çalıştığından emin olmak için otomatik yedekleme testi, Fidye yazılımına karşı koruma için hava boşluklu yedekleme depolama, Düzenli felaket kurtarma tatbikatları ve belgelenmiş prosedürler, Tüm yedekleme verileri birincil verilerle aynı şifreleme ve erişim kontrollerine tabidir."
+    content: "Yedekleme ve felaket kurtarma süreçleri sağlayıcımızın standart uygulamalarına göre yönetilir. Yedek veriler de beklemede şifrelemeye tabidir. Sağlayıcı yapılandırmasına bağlı değişebileceğinden sabit saklama süreleri açıklamayız."
   },
   {
     title: "6. Güvenlik İzleme ve Olay Müdahalesi",
-    content: "7/24 güvenlik izleme sürdürüyor ve kapsamlı olay müdahale prosedürlerimiz var: Otomatik tehdit tespiti ile gerçek zamanlı güvenlik izleme, Şüpheli faaliyetler için log analizi ve anomali tespiti, Tanımlanmış yükseltme prosedürleriyle olay müdahale ekibi, GDPR, CCPA ve KVKK'ya uygun veri ihlali bildirimi prosedürleri, Gelişmiş sürekli tehditler için Güvenlik Operasyon Merkezi (SOC) izleme, Üçüncü taraf güvenlik firmaları tarafından düzenli penetrasyon testi, Güvenlik araştırmacıları için güvenlik açığı açıklama programı."
+    content: "Platform ve uygulama loglarını gözden geçirerek olağandışı etkinlikleri tespit eder ve yanıtlarız. Bir veri olayı halinde GDPR/KVKK/Google Play gereklilikleri doğrultusunda kullanıcıları ve gerektiğinde otoriteleri bilgilendiririz."
   },
   {
     title: "7. Çalışan Güvenlik Eğitimi",
-    content: "Ekip üyelerimiz güvenlik en iyi uygulamaları ve veri koruması konusunda eğitilmiştir: Tüm çalışanlar için zorunlu güvenlik farkındalığı eğitimi, Geliştiriciler için güvenli kodlama uygulamaları konusunda özel eğitim, Düzenli kimlik avı simülasyon egzersizleri, GDPR, CCPA ve KVKK gereksinimlerini kapsayan veri koruma eğitimi, Hassas sistemlere erişimi olan çalışanlar için geçmiş kontrolleri, Gizlilik sözleşmeleri ve güvenlik politikaları kabulü, Devam eden güvenlik eğitimi ve sertifikasyon programları."
+    content: "Güvenli geliştirme ve operasyonel uygulamaları teşvik eder, en az ayrıcalık ve periyodik erişim gözden geçirmeleri uygularız."
   },
   {
     title: "8. Üçüncü Taraf Güvenliği",
-    content: "Tüm üçüncü taraf hizmetleri dikkatle inceler ve güvenlik standartlarımızı karşıladıklarından emin oluruz: Tüm satıcılar için durum tespiti güvenlik değerlendirmeleri, Sıkı güvenlik gereksinimleriyle veri işleme anlaşmaları (DPA), Kritik üçüncü taraf hizmetlerin düzenli güvenlik denetimleri, Devam eden izlemeyle satıcı risk yönetimi programı, Üçüncü taraf API'larıyla güvenli entegrasyon uygulamaları, Güvenlik ihlali bildirimleri için sözleşmeli yükümlülükler, Veri minimizasyonu ilkesini takip eden sınırlı veri paylaşımı."
+    content: "Üçüncü taraf kullanımını en aza indirir, yalnızca uygulamayı çalıştırmak için gerekli hizmetleri (ör. Supabase, Google Analytics) entegre ederiz. Veri minimizasyonu uygular, kritik yapılandırmaları periyodik olarak gözden geçiririz."
   },
   {
     title: "9. Mobil Uygulama Güvenliği",
-    content: "Mobil uygulamalarımız güvenlik en iyi uygulamalarını içerir: Kod gizleme ve kurcalamaya karşı önlemler, Ortadaki adam saldırılarını önlemek için sertifika sabitleme, Cihaz düzeyinde şifrelemeli güvenli yerel depolama, Mevcut olduğunda biyometrik kimlik doğrulama desteği, Çalışma Zamanı Uygulama Kendi Kendini Koruma (RASP) teknikleri, Uygulama mağazası dağıtımları aracılığıyla düzenli güvenlik güncellemeleri, Kaynak kodu güvenlik taraması ve bağımlılık güvenlik açığı kontrolleri."
+    content: "Uygulama bağımlılıklarını güncel tutar, istemciye gizli anahtar koymaktan kaçınırız. Yerel veriler cihaz depolamasında tutulur; hassas işlemler kimlik doğrulama gerektirir."
   },
   {
     title: "10. Uyumluluk ve Denetim",
-    content: "Uluslararası veri koruması ve güvenlik standartlarıyla uyumluluğu sürdürüyoruz: AB kullanıcıları için düzenli değerlendirmelerle GDPR uyumluluğu, Kaliforniya sakinleri için CCPA uyumluluğu, Türk kullanıcılar için KVKK uyumluluğu, Hizmet organizasyon kontrolleri için SOC 2 Tip II denetimleri, ISO 27001 bilgi güvenliği yönetimi ilkeleri, Düzenli iç güvenlik denetimleri ve dış penetrasyon testleri, Gerektiğinde ilgili otoritelere uyumluluk izleme ve raporlama."
+    content: "Geçerli gizlilik yasalarına (ör. AB için GDPR, Türkiye için KVKK) ve platform politikalarına (Apple, Google Play) uymayı hedefleriz. Sahip olmadığımız sertifikaları iddia etmeyiz."
   },
   {
     title: "11. Güvenlik Sorumluluklarınız",
-    content: "Kapsamlı güvenlik önlemleri uygularken, işbirliğiniz genel güvenliği sürdürmeye yardımcı olur: Hesabınız için güçlü, benzersiz şifreler kullanın, Mevcut olduğunda iki faktörlü kimlik doğrulamayı etkinleştirin, Uygulamanızı en son sürümde tutun, Şüpheli faaliyet veya güvenlik endişelerini derhal bildirin, Güvenilir ağlar kullanın ve hassas faaliyetler için genel Wi-Fi'dan kaçının, Gizlilik ayarlarını ve veri paylaşım seçeneklerini inceleyin ve anlayın, Hesabınızın tehlikeye girdiğinden şüpheleniyorsanız derhal bizimle iletişime geçin."
+    content: "Güçlü cihaz koruması kullanmanız, uygulamayı güncel tutmanız ve şüpheli etkinlikleri support@learnwords.store adresine bildirmeniz güvenliği artırır."
   },
   {
     title: "12. Güvenlik Sorunlarını Bildirme",
-    content: "Güvenlik açıklarının sorumlu açıklanmasını teşvik ediyoruz: Güvenlik iletişim: support@learnwords.store, Kritik güvenlik sorunları için 24 saatlik yanıt taahhüdü, Geçerli bulgular için tanımayla sorumlu açıklama programı, Endüstri standartlarını takip eden koordineli güvenlik açığı açıklaması, Güvenlik araştırmacıları için hata ödülü programı (detaylar www.learnwords.store/security'de), Hassas güvenlik raporları için güvenli iletişim kanalları, Kılavuzlarımız dahilinde iyi niyetli güvenlik araştırmasına karşı yasal işlem yapılmaz."
+    content: "Bir güvenlik sorunu tespit ettiğinizi düşünüyorsanız support@learnwords.store ile iletişime geçin. Bildirimleri zamanında değerlendirir ve gerekirse etkilenen kullanıcıları bilgilendiririz."
   }
 ];
 
