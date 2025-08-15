@@ -160,6 +160,12 @@ const Footer: React.FC = () => {
               <p className="mt-1">
                 Learn Words is not affiliated with any language learning institution.
               </p>
+              <p className="mt-1">
+                <strong>İşletme Sahibi:</strong> Mustafa Yıldız
+              </p>
+              <p className="mt-1">
+                <strong>İletişim:</strong> support@learnwords.store
+              </p>
             </div>
             <div className="flex flex-wrap gap-4 text-xs">
               <a href="https://www.learnwords.store/privacy" className="hover:text-white transition">Privacy</a>
