@@ -39,6 +39,10 @@ export const termsEn = [
     content: "The App is provided \"as is\" without warranties of any kind. We do not guarantee the accuracy of translations or learning outcomes. Learn Words shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business interruption, arising from your use of the App, even if we have been advised of the possibility of such damages."
   },
   {
+    title: "9a. AI-Generated Content Disclaimer",
+    content: "The App uses artificial intelligence (AI) technologies to generate translations and example sentences. While we strive for accuracy, AI-generated content may sometimes be incomplete, inaccurate, or inappropriate. Such content is provided for informational purposes only. Users are advised not to rely solely on AI-generated outputs for critical, legal, medical, or professional purposes. By using the App, you acknowledge these limitations."
+  },
+  {
     title: "10. Account Termination",
     content: "You may delete your account at any time through the App settings or by contacting us. We may terminate your access for violation of these Terms, illegal activity, or extended periods of inactivity. Upon termination, your right to use the App ceases immediately, and we may delete your data in accordance with our data retention policies."
   },
@@ -96,6 +100,10 @@ export const termsTr = [
   {
     title: "9. Feragatnameler ve Sorumluluk Sınırlaması",
     content: "Uygulama herhangi bir garanti olmaksızın \"olduğu gibi\" sunulmaktadır. Çevirilerin doğruluğunu veya öğrenme sonuçlarını garanti etmiyoruz. Learn Words, Uygulamanın kullanımından kaynaklanan dolaylı, arızi, özel, netice kabilinden veya cezai zararlar dahil olmak üzere kar, veri veya iş kesintisi kaybından sorumlu olmayacaktır, bu tür zararların olasılığı konusunda bilgilendirilmiş olsak bile."
+  },
+  {
+    title: "9a. Yapay Zekâ Tarafından Üretilen İçerik Feragatnamesi",
+    content: "Uygulama, çeviri ve örnek cümleler üretmek için yapay zekâ (YZ) teknolojileri kullanır. Doğruluk için çabalasak da, YZ tarafından üretilen içerikler bazen eksik, hatalı veya uygunsuz olabilir. Bu içerikler yalnızca bilgilendirme amaçlıdır. Kullanıcıların, YZ çıktılarının doğruluğunu kritik, hukuki, tıbbi veya profesyonel amaçlarla tek başına dayanak olarak kullanmaması gerekir. Uygulamayı kullanarak bu sınırlamaları kabul etmiş olursunuz."
   },
   {
     title: "10. Hesap Sonlandırma",
