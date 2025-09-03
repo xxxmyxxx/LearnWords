@@ -24,11 +24,11 @@ export const termsEn = [
   },
   {
     title: "6. Intellectual Property Rights",
-    content: "The App and all its contents, including but not limited to text, graphics, logos, icons, images, audio clips, software code, and user interface design, are owned by Learn Words or its licensors and are protected by international copyright, trademark, and other intellectual property laws. Our word databases are compiled from public domain sources and educational materials under appropriate licenses."
+    content: "© 2025 Learn Words. All rights reserved. The App's original software code, user interface design, graphics, and logos are owned by Learn Words and protected by applicable intellectual property laws. Educational content including word lists, definitions, and example sentences may be sourced from publicly available dictionaries, educational resources, and user contributions. Users retain rights to their original content (custom word lists, study materials). We respect third-party intellectual property and comply with fair use principles for educational purposes."
   },
   {
     title: "7. Third-Party Services and Integrations",
-    content: "The App integrates with third-party services including: Google Sign-In and Google Services (subject to Google's Terms of Service and Privacy Policy), Apple Sign-In (subject to Apple's Terms of Service), Supabase for data storage and authentication, and various analytics services for app improvement. Your use of these third-party services is subject to their respective terms and privacy policies."
+    content: "The App integrates with third-party services including: Google Sign-In and Google Services (subject to Google's Terms of Service and Privacy Policy), Apple Sign-In (subject to Apple's Terms of Service), Supabase for data storage and authentication, AI Translation Services for individual word translations processed through third-party providers for educational purposes, and various analytics services for app improvement. Your use of these third-party services is subject to their respective terms and privacy policies."
   },
   {
     title: "8. Subscription and Payment Terms",
@@ -40,7 +40,7 @@ export const termsEn = [
   },
   {
     title: "9a. AI-Generated Content Disclaimer",
-    content: "The App uses artificial intelligence (AI) technologies to generate translations and example sentences. While we strive for accuracy, AI-generated content may sometimes be incomplete, inaccurate, or inappropriate. Such content is provided for informational purposes only. Users are advised not to rely solely on AI-generated outputs for critical, legal, medical, or professional purposes. By using the App, you acknowledge these limitations."
+    content: "The App uses artificial intelligence (AI) technologies to provide individual word translations for educational purposes. While we strive for accuracy, AI-generated translations may sometimes be incomplete, inaccurate, or inappropriate. Individual word translations are processed through third-party AI services and such content is provided for informational purposes only. Users are advised not to rely solely on AI-generated outputs for critical, legal, medical, or professional purposes. By using the App, you acknowledge these limitations and that translation accuracy may vary."
   },
   {
     title: "10. Account Termination",
@@ -60,7 +60,7 @@ export const termsEn = [
   },
   {
     title: "14. Contact Information",
-    content: "For questions about these Terms, please contact us at: Email: support@learnwords.store, Address: Learn Words App Development, Istanbul, Turkey. For KVKK-related inquiries (Turkey): support@learnwords.store. Last updated: July 15, 2025"
+    content: "For questions about these Terms, please contact us at: Email: support@learnwords.store, Address: Learn Words App Development, Istanbul, Turkey. For KVKK-related inquiries (Turkey): support@learnwords.store. Last updated: September 3, 2025 - Updated for AI translation services"
   }
 ];
 
@@ -87,11 +87,11 @@ export const termsTr = [
   },
   {
     title: "6. Fikri Mülkiyet Hakları",
-    content: "Uygulama ve metin, grafikler, logolar, simgeler, görüntüler, ses klipleri, yazılım kodu ve kullanıcı arayüzü tasarımı dahil ancak bunlarla sınırlı olmayan tüm içerikleri Learn Words veya lisans verenlerin mülkiyetindedir ve uluslararası telif hakkı, marka ve diğer fikri mülkiyet yasalarıyla korunmaktadır. Kelime veritabanlarımız, uygun lisanslar altında kamu malı kaynaklarından ve eğitim materyallerinden derlenmiştir."
+    content: "© 2025 Learn Words. Tüm hakları saklıdır. Uygulamanın özgün yazılım kodu, kullanıcı arayüzü tasarımı, grafikler ve logoları Learn Words'e aittir ve geçerli fikri mülkiyet yasalarıyla korunmaktadır. Kelime listeleri, tanımlar ve örnek cümleler dahil eğitim içeriği, halka açık sözlükler, eğitim kaynaklarından ve kullanıcı katkılarından sağlanabilir. Kullanıcılar özgün içeriklerinin (özel kelime listeleri, çalışma materyalleri) haklarını saklı tutar. Üçüncü taraf fikri mülkiyet haklarına saygı duyar ve eğitim amaçlı adil kullanım ilkelerine uyarız."
   },
   {
     title: "7. Üçüncü Taraf Hizmetleri ve Entegrasyonlar",
-    content: "Uygulama şu üçüncü taraf hizmetlerle entegre olur: Google ile Giriş ve Google Hizmetleri (Google'ın Hizmet Koşulları ve Gizlilik Politikasına tabidir), Apple ile Giriş (Apple'ın Hizmet Koşullarına tabidir), veri depolama ve kimlik doğrulama için Supabase, uygulama iyileştirme için çeşitli analitik hizmetler. Bu üçüncü taraf hizmetlerin kullanımı, kendi hüküm ve gizlilik politikalarına tabidir."
+    content: "Uygulama şu üçüncü taraf hizmetlerle entegre olur: Google ile Giriş ve Google Hizmetleri (Google'ın Hizmet Koşulları ve Gizlilik Politikasına tabidir), Apple ile Giriş (Apple'ın Hizmet Koşullarına tabidir), veri depolama ve kimlik doğrulama için Supabase, eğitim amaçlı tekil kelime çevirileri için üçüncü taraf AI çeviri hizmetleri, ve uygulama iyileştirme için çeşitli analitik hizmetler. Bu üçüncü taraf hizmetlerin kullanımı, kendi hüküm ve gizlilik politikalarına tabidir."
   },
   {
     title: "8. Abonelik ve Ödeme Koşulları",
@@ -103,7 +103,7 @@ export const termsTr = [
   },
   {
     title: "9a. Yapay Zekâ Tarafından Üretilen İçerik Feragatnamesi",
-    content: "Uygulama, çeviri ve örnek cümleler üretmek için yapay zekâ (YZ) teknolojileri kullanır. Doğruluk için çabalasak da, YZ tarafından üretilen içerikler bazen eksik, hatalı veya uygunsuz olabilir. Bu içerikler yalnızca bilgilendirme amaçlıdır. Kullanıcıların, YZ çıktılarının doğruluğunu kritik, hukuki, tıbbi veya profesyonel amaçlarla tek başına dayanak olarak kullanmaması gerekir. Uygulamayı kullanarak bu sınırlamaları kabul etmiş olursunuz."
+    content: "Uygulama, eğitim amaçlı tekil kelime çevirileri sağlamak için yapay zekâ (YZ) teknolojileri kullanır. Doğruluk için çabalasak da, YZ tarafından üretilen çeviriler bazen eksik, hatalı veya uygunsuz olabilir. Tekil kelime çevirileri üçüncü taraf AI hizmetleri üzerinden işlenir ve bu içerikler yalnızca bilgilendirme amaçlıdır. Kullanıcıların, YZ çıktılarını kritik, hukuki, tıbbi veya profesyonel amaçlarla tek başına dayanak olarak kullanmaması gerekir. Uygulamayı kullanarak bu sınırlamaları ve çeviri doğruluğunun değişebileceğini kabul etmiş olursunuz."
   },
   {
     title: "10. Hesap Sonlandırma",
@@ -123,14 +123,14 @@ export const termsTr = [
   },
   {
     title: "14. İletişim Bilgileri",
-    content: "Bu Koşullar hakkında sorularınız için bizimle iletişime geçin: E-posta: support@learnwords.store, Adres: Learn Words Uygulama Geliştirme, İstanbul, Türkiye. KVKK ile ilgili sorular için: support@learnwords.store. Son güncelleme: 15 Temmuz 2025"
+    content: "Bu Koşullar hakkında sorularınız için bizimle iletişime geçin: E-posta: support@learnwords.store, Adres: Learn Words Uygulama Geliştirme, İstanbul, Türkiye. KVKK ile ilgili sorular için: support@learnwords.store. Son güncelleme: 3 Eylül 2025 - AI çeviri hizmetleri için güncellendi"
   }
 ];
 
 export const privacyEn = [
   {
     title: "1. Information We Collect",
-    content: "We collect only the data necessary to operate the app, provide your account, and improve learning features. What we store on our servers (Supabase): Account and profile data (user ID, email, display name, profile photo), Language preferences (desired and native language codes, level), Usage/progress metadata relevant to cloud features (experience points, current rank, premium status and expiry, last login time, preferences), Gameplay data (game results and related records used for competitions and leaderboards). What stays on your device: Most study data, local word lists and learning history are stored locally on your device (SQLite) and are not uploaded unless you enable features that sync them. Passwords are not stored by us; sign-in is handled by providers (Google, Apple, Facebook). We do not collect data beyond what is listed here. If we introduce features that require additional data (e.g., syncing study schedules like FSRS), we will clearly inform you in‑app and update this Policy and store disclosures before processing."
+    content: "We collect only the data necessary to operate the app, provide your account, and improve learning features. What we store on our servers (Supabase): Account and profile data (user ID, email, display name, profile photo), Language preferences (desired and native language codes, level), Usage/progress metadata relevant to cloud features (experience points, current rank, premium status and expiry, last login time, preferences), Gameplay data (game results and related records used for competitions and leaderboards). Translation requests: Individual words submitted for translation are processed through third-party AI services for immediate educational translation and are not permanently stored by us. What stays on your device: Most study data, local word lists and learning history are stored locally on your device (SQLite) and are not uploaded unless you enable features that sync them. Passwords are not stored by us; sign-in is handled by providers (Google, Apple, Facebook). We do not collect data beyond what is listed here. If we introduce features that require additional data (e.g., syncing study schedules like FSRS), we will clearly inform you in‑app and update this Policy and store disclosures before processing."
   },
   {
     title: "2. How We Use Your Information", 
@@ -138,7 +138,7 @@ export const privacyEn = [
   },
   {
     title: "3. Information Sharing and Third-Party Services",
-    content: "We share data only as needed to operate the app: Service providers: Supabase (authentication and database), Google Analytics (product analytics). OAuth providers (Google, Apple, Facebook) authenticate you but do not share your password with us. We do not sell personal data. We may disclose information if required by law or to protect our rights and users."
+    content: "We share data only as needed to operate the app: Service providers: Supabase (authentication and database), Google Analytics (product analytics), AI translation services for individual word processing. OAuth providers (Google, Apple, Facebook) authenticate you but do not share your password with us. Translation data: Individual words are processed by third-party AI services for immediate translation purposes only. We do not sell personal data. We may disclose information if required by law or to protect our rights and users."
   },
   {
     title: "4. Data Security and Storage",
@@ -166,7 +166,7 @@ export const privacyEn = [
   },
   {
     title: "10. Changes to This Privacy Policy",
-    content: "We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. Material changes will be notified through: In-app notifications, Email notifications to registered users, Updates on our website with highlighted changes. Your continued use of the app after changes constitutes acceptance of the updated policy. We encourage you to review this policy regularly. Last updated: July 15, 2025."
+    content: "We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. Material changes will be notified through: In-app notifications, Email notifications to registered users, Updates on our website with highlighted changes. Your continued use of the app after changes constitutes acceptance of the updated policy. We encourage you to review this policy regularly. Last updated: September 3, 2025 - Updated for AI translation services."
   },
   {
     title: "11. Contact Information and Data Protection",
@@ -177,7 +177,7 @@ export const privacyEn = [
 export const privacyTr = [
   {
     title: "1. Topladığımız Bilgiler",
-    content: "Yalnızca uygulamayı çalıştırmak, hesabınızı sağlamak ve öğrenme özelliklerini geliştirmek için gerekli verileri toplarız. Sunucularda (Supabase) saklananlar: Hesap ve profil verileri (kullanıcı kimliği, e‑posta, görünen ad, profil fotoğrafı), Dil tercihleri (hedef ve ana dil kodları, seviye), Bulut özellikleriyle ilgili kullanım/ilerleme metadatası (deneyim puanı, mevcut rütbe, premium durumu ve bitiş tarihi, son giriş zamanı, tercihler), Oyun/yarışma verileri (liderlik tabloları ve karşılaştırmalar için oyun sonuçları). Cihazınızda kalanlar: Çoğu çalışma verisi, yerel kelime listeleri ve öğrenme geçmişi cihazınızda (SQLite) saklanır ve eşitleme özelliklerini etkinleştirmedikçe sunucuya yüklenmez. Parolalar bizde tutulmaz; oturum açma sağlayıcılar (Google, Apple, Facebook) tarafından yönetilir. Bu listelenenlerin ötesinde veri toplamayız. Gelecekte ek veri gerektiren özellikler (ör. FSRS gibi çalışma programlarının eşitlenmesi) sunarsak, uygulama içinde açıkça bilgilendirir, bu Politikayı ve mağaza beyanlarını güncelledikten sonra işleriz."
+    content: "Yalnızca uygulamayı çalıştırmak, hesabınızı sağlamak ve öğrenme özelliklerini geliştirmek için gerekli verileri toplarız. Sunucularda saklananlar: Hesap ve profil verileri (kullanıcı kimliği, e‑posta, görünen ad, profil fotoğrafı), Dil tercihleri (hedef ve ana dil kodları, seviye), Bulut özellikleriyle ilgili kullanım/ilerleme metadatası (deneyim puanı, mevcut rütbe, premium durumu ve bitiş tarihi, son giriş zamanı, tercihler), Oyun/yarışma verileri (liderlik tabloları ve karşılaştırmalar için oyun sonuçları). Çeviri talepleri: Çeviri için gönderilen tekil kelimeler, eğitim amaçlı anlık çeviri için üçüncü taraf AI hizmetleri tarafından işlenir ve tarafımızca kalıcı olarak saklanmaz. Cihazınızda kalanlar: Çoğu çalışma verisi, yerel kelime listeleri ve öğrenme geçmişi cihazınızda (SQLite) saklanır ve eşitleme özelliklerini etkinleştirmedikçe sunucuya yüklenmez. Parolalar bizde tutulmaz; oturum açma sağlayıcılar (Google, Apple, Facebook) tarafından yönetilir. Bu listelenenlerin ötesinde veri toplamayız. Gelecekte ek veri gerektiren özellikler (ör. FSRS gibi çalışma programlarının eşitlenmesi) sunarsak, uygulama içinde açıkça bilgilendirir, bu Politikayı ve mağaza beyanlarını güncelledikten sonra işleriz."
   },
   {
     title: "2. Bilgilerinizi Nasıl Kullanıyoruz",
@@ -185,7 +185,7 @@ export const privacyTr = [
   },
   {
     title: "3. Bilgi Paylaşımı ve Üçüncü Taraf Hizmetler",
-    content: "Verileri yalnızca uygulamayı işletmek için gerekli olduğu ölçüde işler/paylaşırız: Hizmet sağlayıcıları: Supabase (kimlik doğrulama ve veritabanı), Google Analytics (ürün analitiği). OAuth sağlayıcıları (Google, Apple, Facebook) sizi doğrular; parolanızı bizimle paylaşmaz. Kişisel verileri satmayız. Yasal zorunluluk halinde veya haklarımızı/kullanıcılarımızı korumak için açıklama yapabiliriz."
+    content: "Verileri yalnızca uygulamayı işletmek için gerekli olduğu ölçüde işler/paylaşırız: Hizmet sağlayıcıları: Supabase (kimlik doğrulama ve veritabanı), Google Analytics (ürün analitiği), tekil kelime işleme için AI çeviri hizmetleri. OAuth sağlayıcıları (Google, Apple, Facebook) sizi doğrular; parolanızı bizimle paylaşmaz. Çeviri verileri: Tekil kelimeler yalnızca anlık çeviri amacıyla üçüncü taraf AI hizmetleri tarafından işlenir. Kişisel verileri satmayız. Yasal zorunluluk halinde veya haklarımızı/kullanıcılarımızı korumak için açıklama yapabiliriz."
   },
   {
     title: "4. Veri Güvenliği ve Depolama",
@@ -213,7 +213,7 @@ export const privacyTr = [
   },
   {
     title: "10. Bu Gizlilik Politikasındaki Değişiklikler",
-    content: "Uygulamalarımızdaki veya yasal gereksinimlerdeki değişiklikleri yansıtmak için bu Gizlilik Politikasını periyodik olarak güncelleyebiliriz. Önemli değişiklikler şu yollarla bildirilecektir: Uygulama içi bildirimler, Kayıtlı kullanıcılara e-posta bildirimleri, Vurgulanan değişikliklerle web sitemizde güncellemeler. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz güncellenmiş politikayı kabul ettiğiniz anlamına gelir. Bu politikayı düzenli olarak gözden geçirmenizi teşvik ediyoruz. Son güncelleme: 15 Temmuz 2025."
+    content: "Uygulamalarımızdaki veya yasal gereksinimlerdeki değişiklikleri yansıtmak için bu Gizlilik Politikasını periyodik olarak güncelleyebiliriz. Önemli değişiklikler şu yollarla bildirilecektir: Uygulama içi bildirimler, Kayıtlı kullanıcılara e-posta bildirimleri, Vurgulanan değişikliklerle web sitemizde güncellemeler. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz güncellenmiş politikayı kabul ettiğiniz anlamına gelir. Bu politikayı düzenli olarak gözden geçirmenizi teşvik ediyoruz. Son güncelleme: 3 Eylül 2025 - AI çeviri hizmetleri için güncellendi."
   },
   {
     title: "11. İletişim Bilgileri ve Veri Koruması",
@@ -428,7 +428,7 @@ export const kvkkTr = [
   },
   {
     title: "3. Kişisel Veri Kategorileri ve İşleme Amaçları",
-    content: "İşlediğimiz kişisel veri kategorileri ve amaçları: Kimlik Verisi (ad, soyad, e-posta): Hesap oluşturma ve kimlik doğrulama, İletişim Verisi (e-posta adresi): Size ulaşım ve bilgilendirme, Müşteri İşlem Verisi (öğrenme ilerlemesi, tercihler): Hizmet sunumu ve kişiselleştirme, Pazarlama Verisi (e-posta tercihleri): Pazarlama faaliyetleri (onayınızla), Hukuki İşlem Verisi (sözleşme bilgileri): Hukuki yükümlülüklerin yerine getirilmesi, Teknik Veri (IP adresi, cihaz bilgisi): Güvenlik ve sistem optimizasyonu."
+    content: "İşlediğimiz kişisel veri kategorileri ve amaçları: Kimlik Verisi (ad, soyad, e-posta): Hesap oluşturma ve kimlik doğrulama, İletişim Verisi (e-posta adresi): Size ulaşım ve bilgilendirme, Müşteri İşlem Verisi (öğrenme ilerlemesi, tercihler): Hizmet sunumu ve kişiselleştirme, Çeviri Verisi (tekil kelimeler): Eğitim amaçlı anlık çeviri için üçüncü taraf AI hizmetleri tarafından işlenir, Pazarlama Verisi (e-posta tercihleri): Pazarlama faaliyetleri (onayınızla), Hukuki İşlem Verisi (sözleşme bilgileri): Hukuki yükümlülüklerin yerine getirilmesi, Teknik Veri (IP adresi, cihaz bilgisi): Güvenlik ve sistem optimizasyonu."
   },
   {
     title: "4. Kişisel Verilerin İşlenme Koşulları",
@@ -475,7 +475,7 @@ export const kvkkTr = [
   },
   {
     title: "12. KVKK Uyum Süreçlerimiz",
-    content: "KVKK'ya uyumumuzu sürekli kılmak için: Veri Envanteri: İşlediğimiz tüm kişisel verileri kategorize ederiz, Etki Değerlendirmesi: Yüksek riskli işlemler için KVKK Etki Değerlendirmesi yaparız, Politika Güncellemeleri: Mevzuat değişikliklerini takip eder, politikalarımızı güncelleriz, Personel Eğitimi: Düzenli KVKK eğitimleri ve farkındalık programları, İç Denetim: KVKK uyumunu düzenli olarak denetleriz, Kurul Kararları: Kişisel Verileri Koruma Kurulu kararlarını takip ederiz, Sektör Rehberleri: İlgili sektörel rehberleri uygularız. Son güncelleme: 15 Temmuz 2025"
+    content: "KVKK'ya uyumumuzu sürekli kılmak için: Veri Envanteri: İşlediğimiz tüm kişisel verileri kategorize ederiz, Etki Değerlendirmesi: Yüksek riskli işlemler için KVKK Etki Değerlendirmesi yaparız, Politika Güncellemeleri: Mevzuat değişikliklerini takip eder, politikalarımızı güncelleriz, Personel Eğitimi: Düzenli KVKK eğitimleri ve farkındalık programları, İç Denetim: KVKK uyumunu düzenli olarak denetleriz, Kurul Kararları: Kişisel Verileri Koruma Kurulu kararlarını takip ederiz, Sektör Rehberleri: İlgili sektörel rehberleri uygularız. Son güncelleme: 3 Eylül 2025 - AI çeviri hizmetleri için güncellendi"
   }
 ];
 
@@ -537,6 +537,6 @@ export const kvkkEn = [
   },
   {
     title: "12. Our KVKK Compliance Processes",
-    content: "To ensure continuous KVKK compliance: Data Inventory: We categorize all personal data we process, Impact Assessment: We conduct KVKK Impact Assessment for high-risk processing, Policy Updates: We follow legislative changes and update our policies, Staff Training: Regular KVKK training and awareness programs, Internal Audit: We regularly audit KVKK compliance, Board Decisions: We follow Personal Data Protection Board decisions, Sector Guidelines: We implement relevant sectoral guidelines. Last updated: July 15, 2025"
+    content: "To ensure continuous KVKK compliance: Data Inventory: We categorize all personal data we process, Impact Assessment: We conduct KVKK Impact Assessment for high-risk processing, Policy Updates: We follow legislative changes and update our policies, Staff Training: Regular KVKK training and awareness programs, Internal Audit: We regularly audit KVKK compliance, Board Decisions: We follow Personal Data Protection Board decisions, Sector Guidelines: We implement relevant sectoral guidelines. Last updated: September 3, 2025 - Updated for AI translation services"
   }
 ];
